@@ -1062,6 +1062,11 @@
         grid-template-columns: 1fr;
       }
 
+      .source-block,
+      .step {
+        grid-template-columns: 1fr;
+      }
+
       .banner-copy {
         position: static;
         padding: 24px;
@@ -1083,23 +1088,42 @@
       .link-grid {
         grid-template-columns: 1fr;
       }
-
     }
 
     @media (max-width: 760px) {
       .shell {
-        padding: 0 16px 72px;
+        padding: 0 14px 64px;
       }
 
       .topbar {
         position: static;
-        padding: 18px 0 8px;
+        padding: 16px 0 8px;
       }
 
       .topbar,
       .topbar-actions {
         align-items: flex-start;
         flex-direction: column;
+        gap: 10px;
+      }
+
+      .topbar-actions {
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+
+      .button,
+      .button-ghost {
+        padding: 11px 16px;
+        font-size: 0.85rem;
+      }
+
+      .brand svg {
+        width: 96px;
+      }
+
+      .brand-note {
+        font-size: 0.68rem;
       }
 
       .hero-card,
@@ -1107,13 +1131,17 @@
       .source-block,
       .step,
       .closing {
-        padding: 22px;
-        border-radius: 24px;
+        padding: 20px;
+        border-radius: 20px;
+      }
+
+      .banner-hero {
+        margin-bottom: 20px;
       }
 
       .banner-frame {
         min-height: unset;
-        border-radius: 24px;
+        border-radius: 20px;
       }
 
       .banner-copy {
@@ -1121,7 +1149,267 @@
       }
 
       .banner-copy h1 {
-        font-size: clamp(1.95rem, 9vw, 3rem);
+        font-size: clamp(1.6rem, 7.5vw, 2.6rem);
+        letter-spacing: -0.04em;
+      }
+
+      .banner-stats {
+        gap: 8px;
+      }
+
+      .banner-stat {
+        padding: 12px 14px;
+        border-radius: 14px;
+      }
+
+      .banner-stat strong {
+        font-size: 0.9rem;
+      }
+
+      .banner-stat span {
+        font-size: 0.8rem;
+      }
+
+      .hero-card h2 {
+        font-size: clamp(1.3rem, 5vw, 1.8rem);
+      }
+
+      .lead {
+        font-size: 1rem;
+      }
+
+      .hero-meta {
+        gap: 12px;
+        margin-top: 24px;
+      }
+
+      .meta-card {
+        min-height: unset;
+        padding: 18px 16px 16px;
+      }
+
+      .source-copy h2 {
+        font-size: clamp(1.2rem, 4.5vw, 1.6rem);
+      }
+
+      .step h3 {
+        font-size: clamp(1.1rem, 4vw, 1.5rem);
+      }
+
+      .closing h2 {
+        font-size: clamp(1.2rem, 4.5vw, 1.6rem);
+      }
+
+      .source-copy p,
+      .step p,
+      .closing p {
+        font-size: 0.92rem;
+      }
+
+      .source-block,
+      .step {
+        gap: 20px;
+        padding: 20px;
+      }
+
+      .step-paired-row {
+        gap: 20px;
+      }
+
+      .prompt-block {
+        font-size: 0.55rem;
+        padding: 10px 12px;
+      }
+
+      .media-panel,
+      .compare-panel {
+        padding: 14px;
+        border-radius: 18px;
+      }
+
+      .asset-frame {
+        border-radius: 16px;
+      }
+
+      .compare {
+        border-radius: 16px;
+      }
+
+      .compare-chip {
+        padding: 6px 10px;
+        font-size: 0.64rem;
+        top: 10px;
+      }
+
+      .compare-chip.before {
+        left: 10px;
+      }
+
+      .compare-chip.after {
+        right: 10px;
+      }
+
+      .compare-handle::before {
+        width: 36px;
+        height: 36px;
+        font-size: 0.85rem;
+      }
+
+      .link-grid {
+        gap: 10px;
+      }
+
+      .link-card {
+        padding: 16px;
+        border-radius: 16px;
+      }
+
+      .link-card strong {
+        font-size: 0.92rem;
+      }
+
+      .link-card span {
+        font-size: 0.85rem;
+      }
+
+      .side-list a {
+        padding: 10px 12px;
+        font-size: 0.9rem;
+      }
+
+      .side-index {
+        width: 28px;
+        height: 28px;
+        font-size: 0.72rem;
+      }
+
+      .hero-side p {
+        font-size: 0.88rem;
+      }
+
+      .note-card {
+        padding: 14px 16px;
+        font-size: 0.9rem;
+      }
+
+      .eyebrow,
+      .banner-kicker {
+        font-size: 0.68rem;
+        padding: 7px 12px;
+      }
+
+      .step-number,
+      .section-label {
+        font-size: 0.7rem;
+      }
+
+      .site-footer {
+        font-size: 0.85rem;
+        padding-top: 20px;
+      }
+
+      .footer-brand svg {
+        width: 96px;
+      }
+
+      .media-panel figcaption {
+        margin-top: 10px;
+        font-size: 0.85rem;
+      }
+
+      .compare-note {
+        font-size: 0.85rem;
+        padding: 12px 14px;
+      }
+
+      .copy-button {
+        font-size: 0.6rem;
+        padding: 6px 10px;
+      }
+    }
+
+    @media (max-width: 420px) {
+      .shell {
+        padding: 0 10px 56px;
+      }
+
+      .hero-card,
+      .hero-side,
+      .source-block,
+      .step,
+      .closing {
+        padding: 16px;
+        border-radius: 16px;
+      }
+
+      .banner-frame {
+        border-radius: 16px;
+      }
+
+      .banner-copy {
+        padding: 14px;
+      }
+
+      .banner-copy h1 {
+        font-size: clamp(1.4rem, 7vw, 2.2rem);
+      }
+
+      .hero-card h2 {
+        font-size: 1.2rem;
+      }
+
+      .lead {
+        font-size: 0.92rem;
+      }
+
+      .meta-card {
+        padding: 14px 12px 12px;
+      }
+
+      .meta-card strong {
+        font-size: 1rem;
+      }
+
+      .meta-card p {
+        font-size: 0.88rem;
+      }
+
+      .source-block,
+      .step {
+        gap: 16px;
+        padding: 16px;
+      }
+
+      .media-panel,
+      .compare-panel {
+        padding: 10px;
+        border-radius: 14px;
+      }
+
+      .asset-frame {
+        border-radius: 12px;
+      }
+
+      .topbar-actions {
+        gap: 8px;
+      }
+
+      .button,
+      .button-ghost {
+        padding: 10px 14px;
+        font-size: 0.82rem;
+      }
+
+      .step-paired {
+        gap: 14px;
+      }
+
+      .step-paired-row {
+        gap: 16px;
+      }
+
+      .link-card {
+        padding: 14px;
       }
     }
   </style>
