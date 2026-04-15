@@ -1,44 +1,52 @@
-# Why You No Longer Need to Spend Money on an Interior Designer
+# How to Turn One Sketch Into Polished Client-Ready Architectural Renders
 
 ![Banner](assets/banner-start.png)
 
-## Why does it no longer make sense to spend money on interior designers and architectural visualizations?
+## Start with the still
 
-Introducing Sogni - a platform where you can upload a sketch and turn it into virtually any realization you can imagine. Any color, any material, any structure. You can reshape dimensions, explore different angles, create 2D or 3D effects, and experiment freely while saving a tremendous amount of time and money.
+One sketch is enough to create polished client-ready architectural renders in Sogni. The fastest path is simple: make one still worth showing, expand it into more angles, and add motion only when the presentation needs it.
 
-This workflow does not replace technical architecture. It replaces the slow and expensive loop of paying for every visualization round just to explore the idea.
+What this walkthrough builds:
 
-## Start from one sketch
+- one polished still
+- one reusable angle set
+- one optional reveal video
 
-You have that one sketch or digital concept. At first glance, it might feel abstract - but is it really? Let’s walk through it together step by step.
+## Proof first
 
-![Image 0 - Source sketch](assets/article-x-houses/0.jpg)
+Start with the sketch, then get the first still working, then expand it.
 
-## Step 1 - Open Sogni Create or Sogni Studio
+![Source sketch](assets/article-x-houses/0.jpg)
+![First polished still](assets/article-x-houses/7po.png)
+![Angle-set example](assets/article-x-houses/12.png)
 
-Open [Sogni Create](https://app.sogni.ai/create) or download Sogni Studio / Pro for the full range of features. There is also a mobile version available for those who prefer working on the go.
+This tutorial still runs in 10 steps. They are grouped into 3 phases so readers can scan the workflow quickly without losing the step-by-step path.
 
-![Image 1 - Sogni Create](assets/article-x-houses/1.png)
+## Phase 1 - Create the first still worth showing
 
-## Step 2 - Choose the editing model
+Stay inside Sogni Create until you have one image you would actually put in front of a client.
 
-Open Qwen Image Edit - you will find two versions available: ultra-fast and standard.
+### Step 1 - Start in Sogni Create
 
-You can also use Flux 2, which is another editing model equipped with a reference image feature, allowing you to add multiple references at once.
+For the clearest first pass, start in [Sogni Create](https://app.sogni.ai/create) in the browser. It gets you into the workflow immediately and keeps the focus on the image instead of setup.
 
-![Image 2 - Model selection](assets/article-x-houses/2.png)
+![Sogni Create landing screen](assets/article-x-houses/1.png)
 
-## Step 3 - Upload the reference image
+### Step 2 - Choose the fastest path to a first render
 
-Let’s begin with the most important element - the reference image. This is where everything starts. Upload your sketch here and adjust the image size accordingly. You can leave the rest of the settings, such as Steps and Guidance, at their default values.
+Start with **Qwen Image Edit** for the quickest route from sketch to believable render. If you want to combine multiple references later, switch to **Flux 2** after the first still is already working.
 
-![Image 3 - Reference image setup](assets/article-x-houses/3.png)
+![Model selection](assets/article-x-houses/2.png)
 
-## Step 4 - Write the prompt
+### Step 3 - Upload your sketch as the anchor
 
-Next, enter your prompt. The most important part is what you want the house to look like - the materials, the environment, and the mood. This is where you can experiment as much as you like. Then simply choose the number of images you want to generate.
+Upload the sketch and leave most settings at their defaults for the first pass. The point here is to protect the original structure and composition while you improve realism around it.
 
-You can select a style like Architectural, but leaving it on Default will also deliver great results.
+![Reference image setup](assets/article-x-houses/3.png)
+
+### Step 4 - Write the prompt like a design brief
+
+Focus first on materials, lighting, landscaping, and mood. Those are the biggest visual levers, and they are enough to get a strong first pass without overcomplicating the setup.
 
 ```text
 Transform this architectural concept into a highly realistic modern luxury house.
@@ -46,91 +54,86 @@ Transform this architectural concept into a highly realistic modern luxury house
 Add a large infinity swimming pool in front of the building, with realistic water reflections and subtle ripples. Use high-end materials such as white concrete, natural wood panels, glass walls, and metal details. Enhance lighting to golden hour with warm sunlight, soft shadows, and realistic ambient occlusion. Add natural landscaping with grass, trees, and subtle terrain details. Improve textures and details to achieve photorealism, including reflections on glass, interior lighting, and outdoor furniture. Keep the original structure and composition but make it look like a real built house. Ultra realistic, 8k, cinematic, high detail, archviz style.
 ```
 
-![Image 4 - Prompt and outputs](assets/article-x-houses/4.png)
+![Prompt and outputs](assets/article-x-houses/4.png)
 
-## Step 5 - Enhance the best output
+### Step 5 - Choose the best output, then push it further with Enhance
 
-Choose the output image you like the most, and enhance it further using the Enhance option. The following tools work especially well:
+Once you have a promising still, use **Enhance** to move it from "good enough" to something you would actually show. In this example, **Boost Realism** and **Fine Details** do most of the work.
 
-- Boost Realism
-- Fine Details such as Refine Fine Details or Enrich Scene Details
+![Enhance tools](assets/article-x-houses/5.png)
 
-![Image 5 - Enhance tools](assets/article-x-houses/5.png)
+#### Before and after
 
-### Before and after
+![Before enhancement](assets/article-x-houses/6przed.jpg)
+![After enhancement](assets/article-x-houses/7po.png)
 
-![Image 6 - Before](assets/article-x-houses/6przed.jpg)
-![Image 7 - After](assets/article-x-houses/7po.png)
+At the end of Phase 1, you should have one polished still you can show, approve, and build the rest of the workflow around.
 
-The visualization becomes more compelling, with richer colors and refined details. You can also use Undo and Redo to compare results and continue experimenting.
+## Phase 2 - Expand the still into an angle set
 
-## Step 6 - Generate multiple angles with 360.sogni.ai
+Move into 360 only after the base image is already strong enough to deserve more viewpoints.
 
-Use the Perspective feature in Sogni Web or Studio, or go directly to [360.sogni.ai](https://360.sogni.ai/).
+### Step 6 - Open 360 by Sogni and generate your first angle set
 
-With just one image, you can generate countless perspectives and different angles in a single click. Simply upload your image, for example the one after enhancement.
+Bring the enhanced still into [360 by Sogni](https://360.sogni.ai/), save the project, choose a preset camera path, and let the tool expand one strong image into multiple viewpoints.
 
-Adjust the image size as needed or keep the original, and name your project so you can revisit and modify it anytime, with everything saved to your account.
+- upload the still and name the project so you can return to it later
+- choose a ready-made preset for the first pass instead of building a custom camera path
+- for this example, use **360 Spin High+Wide (9)** and click **Generate 8 Angles**
 
-If you are not familiar with camera angles, you can use ready-made presets. We selected 360 Spin High+Wide (9), but you are free to choose any option or define your own. Then just click Generate 8 Angles.
+![Upload to 360](assets/article-x-houses/8.png)
+![Name the project](assets/article-x-houses/8.1.png)
+![Choose the preset](assets/article-x-houses/9.png)
+![Generated angle set](assets/article-x-houses/10.png)
 
-![Image 8 - Upload to Sogni 360](assets/article-x-houses/8.png)
-![Image 8.1 - Name the project](assets/article-x-houses/8.1.png)
-![Image 9 - Choose the preset](assets/article-x-houses/9.png)
-![Image 10 - Angle set](assets/article-x-houses/10.png)
+### Step 7 - Build the polished still-image set
 
-You will receive a notification when your results are ready - and it only takes a moment. If you have a house design, whether a sketch or a 3D model, you can even generate both the front and back views, then create multiple angles to replicate it with near-perfect accuracy.
+This is the point where many readers can stop. You already have a strong still package for a catalog, concept sheet, or client presentation. Motion is optional from here.
 
-## Step 7 - Build a polished still-image set
+![Finished angle one](assets/article-x-houses/11.png)
+![Finished angle two](assets/article-x-houses/12.png)
 
-You can download the final images and create a professional catalog for your client.
+At the end of Phase 2, the still-image workflow is complete.
 
-![Image 11 - Still angle one](assets/article-x-houses/11.png)
-![Image 12 - Still angle two](assets/article-x-houses/12.png)
+## Phase 3 - Add motion only when it earns its place
 
-## Step 8 - Generate transitions
+Keep motion as the upgrade path, not the default expectation.
 
-Simply click Generate Transitions and define:
+### Step 8 - Generate transitions
 
-- the type of transitions
-- the video model - LTX or Wan
-- the duration
-- the desired quality
-- the resolution
-- and even the audio
+Start with a short draft before you customize everything. Use default transition settings first, choose one video model, and make sure the base motion works before you spend time polishing it.
 
-![Image 13 - Transition settings](assets/article-x-houses/13.png)
-![Image 14 - Transition progress](assets/article-x-houses/14.png)
+- choose the transition type or write a custom prompt
+- pick a video model: **LTX** or **Wan**
+- set duration, quality, and resolution only after the first draft feels right
 
-## Step 9 - Adjust pacing and render the final video
+![Transition settings](assets/article-x-houses/13.png)
+![Transition progress](assets/article-x-houses/14.png)
 
-You can adjust the speed - slower or faster - depending on your needs. Select the shots you like, remove the rest or regenerate them, and click Generate Final Video. The clips will be stitched into one cohesive film, ready to publish.
+### Step 9 - Adjust pacing and render the final video
+
+Compare pacing options, keep only the shots that improve the story, and stitch the strongest sequence into a finished draft. The workflow stays editable, so you can refine without restarting from scratch.
 
 <video src="assets/article-x-houses/15.1.mp4" autoplay muted loop controls playsinline></video>
 
 <video src="assets/article-x-houses/15.2.mp4" autoplay muted loop controls playsinline></video>
 
-<video src="assets/article-x-houses/16.2.mov" autoplay muted loop controls playsinline></video>
+<video src="assets/article-x-houses/16.1.mp4" autoplay muted loop controls playsinline></video>
 
-## Summary
+### Step 10 - Turn the sketch into a cinematic reveal
 
-Create a transition from the original sketch to the final Sogni Create / Studio result - it is a powerful visual that truly stands out, and all it takes is a simple prompt.
+For the strongest before-and-after moment, use the original sketch as the **Start Frame** and the polished still as the **End Frame**. This turns the tutorial into a presentation payoff instead of just another feature demo.
 
-Choose LTX or WAN in image-to-video mode, use the Start Frame for your sketch and the End Frame for your final project, and describe how you want the transformation to appear.
-
-![Image 17 - Image-to-video setup](assets/article-x-houses/17.png)
+![Sketch-to-final setup](assets/article-x-houses/17.png)
 
 <video src="assets/article-x-houses/18.mp4" autoplay muted loop controls playsinline></video>
 
 ## Final takeaway
 
-This is where the shift becomes clear. The era of relying on expensive interior designers and paid architectural visualizations is coming to an end. With Sogni tools, you can create everything yourself in minutes and refine it as many times as you want, without additional costs.
-
-What once required time, coordination, and significant budgets is now fully in your hands.
+The highest-leverage version of this workflow is still simple: make the first still work, expand it into angles, and add motion only when it earns its place.
 
 ## Explore it yourself
 
 - [Sogni Create](https://app.sogni.ai/create)
 - [360 by Sogni](https://360.sogni.ai/)
 - [Sogni Studio](https://www.sogni.ai/studio)
-- [Sogni AI](https://www.sogni.ai/)
