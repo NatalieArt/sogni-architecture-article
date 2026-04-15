@@ -828,6 +828,7 @@
       background: rgba(255, 255, 255, 0.82);
       box-shadow: 0 0 0 1px rgba(0, 255, 157, 0.18);
       pointer-events: none;
+      will-change: transform;
     }
 
     .compare-handle::before {
@@ -848,6 +849,33 @@
       font-size: 1rem;
       backdrop-filter: blur(10px);
       -webkit-backdrop-filter: blur(10px);
+    }
+
+    @keyframes compare-hint {
+      0%,
+      100% {
+        transform: translateX(0);
+      }
+
+      20% {
+        transform: translateX(-18px);
+      }
+
+      45% {
+        transform: translateX(16px);
+      }
+
+      70% {
+        transform: translateX(-9px);
+      }
+
+      85% {
+        transform: translateX(8px);
+      }
+    }
+
+    .compare.is-hinting .compare-handle {
+      animation: compare-hint 1.45s cubic-bezier(0.22, 1, 0.36, 1) 0.18s 1;
     }
 
     .compare input[type="range"] {
@@ -890,6 +918,12 @@
       border-radius: 50%;
       background: var(--accent);
       box-shadow: 0 0 0 8px rgba(0, 255, 157, 0.18);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .compare.is-hinting .compare-handle {
+        animation: none;
+      }
     }
 
     .closing {
@@ -1958,6 +1992,30 @@
   </div>
 
   <script>
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const compareHintObserver = !prefersReducedMotion.matches && "IntersectionObserver" in window
+      ? new IntersectionObserver((entries, observer) => {
+          entries.forEach((entry) => {
+            if (!entry.isIntersecting) return;
+
+            const compare = entry.target;
+            if (compare.dataset.hintPlayed === "true") {
+              observer.unobserve(compare);
+              return;
+            }
+
+            compare.dataset.hintPlayed = "true";
+            compare.classList.add("is-hinting");
+
+            window.setTimeout(() => {
+              compare.classList.remove("is-hinting");
+            }, 1700);
+
+            observer.unobserve(compare);
+          });
+        }, { threshold: 0.55 })
+      : null;
+
     document.querySelectorAll("[data-compare]").forEach((compare) => {
       const input = compare.querySelector("input[type='range']");
       let dragging = false;
@@ -1997,6 +2055,10 @@
       compare.addEventListener("pointerleave", stopDragging);
 
       sync(Number(input.value));
+
+      if (compareHintObserver) {
+        compareHintObserver.observe(compare);
+      }
     });
 
     document.querySelectorAll("[data-copy-target]").forEach((button) => {
