@@ -311,6 +311,11 @@
       padding: 34px;
     }
 
+    .hero-card .eyebrow {
+      margin-top: -10px;
+      margin-bottom: 12px;
+    }
+
     .hero-card::after {
       content: "";
       position: absolute;
@@ -392,9 +397,9 @@
     }
 
     .hero-side {
-      padding: 24px;
+      padding: 20px;
       display: grid;
-      gap: 18px;
+      gap: 12px;
       align-content: start;
     }
 
@@ -411,19 +416,24 @@
       padding: 0;
       list-style: none;
       display: grid;
-      gap: 12px;
+      gap: 8px;
     }
 
     .side-list a {
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 10px;
       text-decoration: none;
       color: var(--muted-strong);
-      padding: 12px 14px;
+      padding: 10px 12px;
       border-radius: var(--radius-sm);
       border: 1px solid transparent;
       background: rgba(255, 255, 255, 0.02);
+    }
+
+    .side-list a span:last-child {
+      font-size: 0.92rem;
+      line-height: 1.28;
     }
 
     .side-list a:hover {
@@ -435,13 +445,13 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      width: 32px;
-      height: 32px;
+      width: 29px;
+      height: 29px;
       border-radius: 999px;
       border: 1px solid var(--line-strong);
       color: var(--accent);
       font-family: var(--font-mono);
-      font-size: 0.78rem;
+      font-size: 0.72rem;
       flex: none;
     }
 
@@ -713,6 +723,16 @@
       font-size: 0.95rem;
     }
 
+    .media-panel-project-name .asset-frame {
+      width: min(100%, 430px);
+      margin: 0 auto;
+    }
+
+    .media-panel-angle-preset .asset-frame {
+      width: min(100%, 620px);
+      margin: 0 auto;
+    }
+
     .compare-header {
       display: flex;
       align-items: center;
@@ -933,6 +953,10 @@
       flex-wrap: wrap;
       gap: 12px;
       margin-top: 22px;
+    }
+
+    .closing-actions + p {
+      margin-top: clamp(36px, 4vw, 48px);
     }
 
     .link-grid {
@@ -1644,6 +1668,7 @@
             Leave minor details for later refinement, then choose how many images you want to generate. You can select a style
             like <strong>Architectural</strong>, but leaving it on <strong>Default</strong> will also deliver strong results.
           </p>
+          <div class="note-card"><strong>What you should have now:</strong> A first-pass prompt that clearly defines materials, lighting, environment, and mood for your initial image set.</div>
         </div>
         <div class="step-media">
           <figure class="media-panel">
@@ -1656,7 +1681,6 @@
             <div class="prompt-block" id="main-prompt">Transform this architectural concept into a highly realistic modern luxury house. Add a large infinity swimming pool in front of the building, with realistic water reflections and subtle ripples. Use high-end materials such as white concrete, natural wood panels, glass walls, and metal details. Enhance lighting to golden hour with warm sunlight, soft shadows, and realistic ambient occlusion. Add natural landscaping with grass, trees, and subtle terrain details. Improve textures and details to achieve photorealism, including reflections on glass, interior lighting, and outdoor furniture. Keep the original structure and composition but make it look like a real built house. Ultra realistic, 8k, cinematic, high detail, archviz style.</div>
             <button class="copy-button" type="button" data-copy-target="main-prompt">Copy prompt</button>
           </div>
-          <div class="note-card"><strong>What you should have now:</strong> A first-pass prompt that clearly defines materials, lighting, environment, and mood for your initial image set.</div>
         </div>
       </section>
 
@@ -1691,6 +1715,7 @@
               <p>
                 Once you have one polished still you trust, you are ready to expand it into a full presentation set.
               </p>
+              <div class="note-card"><strong>What you should have now:</strong> One enhanced still image you can use as the foundation for angles, transitions, or the final reveal.</div>
             </div>
             <div class="compare-panel">
               <div class="compare-header">
@@ -1711,7 +1736,6 @@
                 <input type="range" min="0" max="100" value="52" aria-label="Adjust before and after comparison">
               </div>
               <div class="compare-note">Drag anywhere on the image or use the slider to compare the pre-enhanced frame with the refined version.</div>
-              <div class="note-card"><strong>What you should have now:</strong> One enhanced still image you can use as the foundation for angles, transitions, or the final reveal.</div>
             </div>
           </div>
         </div>
@@ -1740,7 +1764,7 @@
                 <strong>1.</strong> Set the image size, name the project, and save it so you can return to it later without rebuilding the setup.
               </p>
             </div>
-            <figure class="media-panel">
+            <figure class="media-panel media-panel-project-name">
               <div class="asset-frame">
                 <img src="assets/article-x-houses/8.1.png" alt="Project naming dialog in Sogni 360.">
               </div>
@@ -1754,7 +1778,7 @@
                 You can define your own camera path once the base angle set is working.
               </p>
             </div>
-            <figure class="media-panel">
+            <figure class="media-panel media-panel-angle-preset">
               <div class="asset-frame">
                 <img src="assets/article-x-houses/9.png" alt="Preset selection screen in Sogni 360 with 360 Spin High+Wide selected.">
               </div>
@@ -1767,6 +1791,7 @@
                 <strong>3.</strong> Click <strong>Generate 8 Angles</strong>. In about a minute, one polished still becomes a presentation-ready
                 set of viewpoints.
               </p>
+              <div class="note-card"><strong>What you should have now:</strong> A reusable set of still images from multiple camera angles, ready for delivery or for motion.</div>
             </div>
             <figure class="media-panel">
               <div class="asset-frame">
@@ -1774,7 +1799,6 @@
               </div>
             </figure>
           </div>
-          <div class="note-card"><strong>What you should have now:</strong> A reusable set of still images from multiple camera angles, ready for delivery or for motion.</div>
         </div>
       </section>
 
@@ -1890,6 +1914,7 @@
                 Because the project stays editable, you can return, replace shots, and regenerate the final video without restarting the workflow.
                 That keeps the creative loop in your hands from the first still to the finished motion piece.
               </p>
+              <div class="note-card"><strong>What you should have now:</strong> A stitched draft video with the pacing and shot order you want to present or refine further.</div>
             </div>
             <figure class="media-panel">
               <div class="asset-frame">
@@ -1901,7 +1926,6 @@
               <figcaption>The stitched final video after you choose the best shots and render the finished piece.</figcaption>
             </figure>
           </div>
-          <div class="note-card"><strong>What you should have now:</strong> A stitched draft video with the pacing and shot order you want to present or refine further.</div>
         </div>
       </section>
 
