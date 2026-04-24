@@ -3,22 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>How to Create Coffee Transitions With Starting and Ending Frames | Sogni</title>
-  <meta name="description" content="Use Starting and Ending Frames in Sogni to create coffee transitions, stitch clips automatically in Sogni Mixer, and fine-tune everything in Timeline view.">
+  <title>Starting &amp; Ending Frames | Sogni</title>
+  <meta name="description" content="Use Starting &amp; Ending Frames in Sogni to anchor motion, maintain continuity across clips, and build longer coffee sequences that stitch cleanly in Mixer and Timeline.">
   <!-- Open Graph -->
   <meta property="og:type" content="article">
-  <meta property="og:title" content="How to Create Coffee Transitions With Starting and Ending Frames">
-  <meta property="og:description" content="Use Starting and Ending Frames in Sogni to create coffee transitions, stitch clips automatically in Sogni Mixer, and fine-tune everything in Timeline view.">
-  <meta property="og:image" content="https://natalieart.github.io/sogni-architecture-article/assets/article-coffee-frames/11-outdoor-final.png">
+  <meta property="og:title" content="Starting &amp; Ending Frames">
+  <meta property="og:description" content="Use Starting &amp; Ending Frames in Sogni to anchor motion, maintain continuity across clips, and build longer coffee sequences that stitch cleanly in Mixer and Timeline.">
+  <meta property="og:image" content="https://natalieart.github.io/sogni-architecture-article/assets/article-coffee-frames/banner-starting-ending-frames.png">
   <meta property="og:image:width" content="1080">
   <meta property="og:image:height" content="1080">
   <meta property="og:url" content="https://natalieart.github.io/sogni-architecture-article/guides/starting-ending-frames-coffee/">
   <meta property="og:site_name" content="Sogni AI">
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="How to Create Coffee Transitions With Starting and Ending Frames">
-  <meta name="twitter:description" content="Use Starting and Ending Frames in Sogni to create coffee transitions, stitch clips automatically in Sogni Mixer, and fine-tune everything in Timeline view.">
-  <meta name="twitter:image" content="https://natalieart.github.io/sogni-architecture-article/assets/article-coffee-frames/11-outdoor-final.png">
+  <meta name="twitter:title" content="Starting &amp; Ending Frames">
+  <meta name="twitter:description" content="Use Starting &amp; Ending Frames in Sogni to anchor motion, maintain continuity across clips, and build longer coffee sequences that stitch cleanly in Mixer and Timeline.">
+  <meta name="twitter:image" content="https://natalieart.github.io/sogni-architecture-article/assets/article-coffee-frames/banner-starting-ending-frames.png">
   <link rel="icon" type="image/png" href="../../favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -48,6 +48,7 @@
 
     html {
       scroll-behavior: smooth;
+      -webkit-text-size-adjust: 100%;
     }
 
     body {
@@ -179,7 +180,7 @@
       border: 1px solid var(--line);
       box-shadow: var(--shadow);
       background: rgba(255, 255, 255, 0.03);
-      min-height: 340px;
+      min-height: 360px;
     }
 
     .banner-frame::after {
@@ -187,8 +188,8 @@
       position: absolute;
       inset: 0;
       background:
-        linear-gradient(180deg, rgba(5, 8, 4, 0.05) 0%, rgba(5, 8, 4, 0.1) 40%, rgba(5, 8, 4, 0.84) 100%),
-        linear-gradient(90deg, rgba(0, 0, 0, 0.48) 0%, transparent 50%, rgba(0, 0, 0, 0.16) 100%);
+        linear-gradient(180deg, rgba(5, 8, 4, 0.04) 0%, rgba(5, 8, 4, 0.18) 38%, rgba(5, 8, 4, 0.9) 100%),
+        linear-gradient(90deg, rgba(0, 0, 0, 0.52) 0%, rgba(0, 0, 0, 0.08) 48%, rgba(0, 0, 0, 0.3) 100%);
       pointer-events: none;
     }
 
@@ -196,6 +197,7 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
+      object-position: center center;
     }
 
     .banner-copy {
@@ -205,7 +207,7 @@
       bottom: 24px;
       z-index: 1;
       display: grid;
-      grid-template-columns: minmax(0, 1fr) minmax(320px, 460px);
+      grid-template-columns: minmax(0, 1fr) minmax(320px, 420px);
       gap: 24px;
       align-items: end;
     }
@@ -250,8 +252,8 @@
 
     .banner-copy h1 {
       margin: 0;
-      max-width: 620px;
-      font-size: clamp(1.92rem, 4.1vw, 3.46rem);
+      max-width: 640px;
+      font-size: clamp(2.2rem, 4.6vw, 4rem);
       line-height: 1.02;
       text-align: left;
       text-wrap: balance;
@@ -267,10 +269,10 @@
     }
 
     .banner-stat {
-      padding: 16px 18px;
-      border-radius: 18px;
+      padding: 15px 17px;
+      border-radius: 20px;
       border: 1px solid rgba(255, 255, 255, 0.08);
-      background: rgba(4, 8, 5, 0.58);
+      background: rgba(4, 8, 5, 0.54);
       backdrop-filter: blur(16px);
       -webkit-backdrop-filter: blur(16px);
     }
@@ -278,12 +280,13 @@
     .banner-stat strong {
       display: block;
       font-size: 1rem;
-      margin-bottom: 2px;
+      margin-bottom: 4px;
     }
 
     .banner-stat span {
       color: var(--muted);
-      font-size: 0.85rem;
+      font-size: 0.83rem;
+      line-height: 1.5;
     }
 
     .hero {
@@ -432,6 +435,8 @@
     }
 
     .side-list a span:last-child {
+      flex: 1 1 auto;
+      min-width: 0;
       font-size: 0.92rem;
       line-height: 1.28;
     }
@@ -550,7 +555,7 @@
 
     .prompt-block {
       margin-top: 0;
-      padding: 12px 14px;
+      padding: 14px 16px;
       border-color: var(--line-strong);
       background:
         linear-gradient(180deg, rgba(0, 255, 157, 0.08), rgba(255, 255, 255, 0.02)),
@@ -558,8 +563,8 @@
       word-break: break-word;
       white-space: normal;
       font-family: var(--font-mono);
-      font-size: 0.6rem;
-      line-height: 1.62;
+      font-size: 0.68rem;
+      line-height: 1.68;
       color: var(--muted-strong);
       text-align: left;
     }
@@ -669,10 +674,15 @@
 
     .media-stack.double {
       grid-template-columns: repeat(2, minmax(0, 1fr));
+      justify-items: center;
     }
 
     .media-stack.single {
       grid-template-columns: 1fr;
+    }
+
+    .media-stack.double > .media-panel:not(.media-span) {
+      width: min(100%, 320px);
     }
 
     .media-span {
@@ -702,6 +712,27 @@
       aspect-ratio: 5 / 3;
     }
 
+    .asset-frame.ui-shot {
+      padding: 12px;
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.015)),
+        #070907;
+    }
+
+    .asset-frame.ui-shot img,
+    .asset-frame.ui-shot video {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 16px;
+      object-fit: contain;
+      object-position: center top;
+    }
+
+    .asset-frame.ui-shot.landscape {
+      aspect-ratio: auto;
+    }
+
     .asset-frame img,
     .asset-frame video {
       width: 100%;
@@ -721,6 +752,25 @@
     .media-panel figcaption {
       margin-top: 14px;
       font-size: 0.95rem;
+    }
+
+    @media (min-width: 1181px) {
+      .media-panel-lead-video {
+        width: min(100%, 760px);
+        justify-self: center;
+      }
+    }
+
+    .video-example-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .video-example-grid .asset-frame {
+      background: #000;
+    }
+
+    .video-example-grid > .media-panel:not(.media-span) {
+      width: min(100%, 340px);
     }
 
     .media-panel-project-name .asset-frame {
@@ -783,7 +833,7 @@
       border: 1px solid rgba(255, 255, 255, 0.08);
       background: #020302;
       isolation: isolate;
-      touch-action: none;
+      touch-action: pan-y;
       cursor: ew-resize;
     }
 
@@ -1147,6 +1197,7 @@
       .step-paired-row {
         grid-template-columns: 1fr;
       }
+
     }
 
     @media (max-width: 900px) {
@@ -1175,12 +1226,19 @@
       }
 
       .topbar-actions {
+        width: 100%;
         flex-direction: row;
         flex-wrap: wrap;
       }
 
+      .topbar-actions > * {
+        flex: 1 1 100%;
+      }
+
       .button,
       .button-ghost {
+        width: 100%;
+        min-height: 44px;
         padding: 11px 16px;
         font-size: 0.85rem;
       }
@@ -1213,6 +1271,7 @@
 
       .banner-copy {
         padding: 18px;
+        gap: 14px;
       }
 
       .banner-copy h1 {
@@ -1243,6 +1302,17 @@
 
       .lead {
         font-size: 1rem;
+      }
+
+      .hero {
+        gap: 18px;
+        padding-bottom: 24px;
+      }
+
+      .source-block,
+      .step,
+      .step-paired-row {
+        scroll-margin-top: 28px;
       }
 
       .hero-meta {
@@ -1283,9 +1353,14 @@
         gap: 20px;
       }
 
+      .prompt-shell {
+        margin-top: 16px;
+      }
+
       .prompt-block {
-        font-size: 0.55rem;
-        padding: 10px 12px;
+        font-size: 0.72rem;
+        line-height: 1.72;
+        padding: 12px 14px;
       }
 
       .media-panel,
@@ -1320,6 +1395,10 @@
         width: 36px;
         height: 36px;
         font-size: 0.85rem;
+      }
+
+      .compare-header {
+        align-items: flex-start;
       }
 
       .link-grid {
@@ -1390,8 +1469,12 @@
       }
 
       .copy-button {
-        font-size: 0.6rem;
-        padding: 6px 10px;
+        position: static;
+        width: 100%;
+        min-height: 40px;
+        margin-top: 10px;
+        font-size: 0.66rem;
+        padding: 8px 10px;
       }
     }
 
@@ -1459,6 +1542,7 @@
 
       .button,
       .button-ghost {
+        min-height: 42px;
         padding: 10px 14px;
         font-size: 0.82rem;
       }
@@ -1474,6 +1558,11 @@
       .link-card {
         padding: 14px;
       }
+
+      .prompt-block {
+        font-size: 0.68rem;
+        padding: 11px 12px;
+      }
     }
   </style>
 </head>
@@ -1484,7 +1573,7 @@
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 387 160" aria-hidden="true">
           <path fill="currentColor" d="M17.2,106.99c5.33,2.29,11.3,3.41,17.95,3.41,7.03,0,13.11-1.33,18.23-3.98,5.23-2.75,9.17-6.34,11.82-10.81,2.76-4.44,4.12-9.19,4.12-14.2,0-6.24-1.47-11.22-4.43-14.92-2.86-3.8-6.36-6.57-10.53-8.37-4.09-1.8-9.4-3.59-15.96-5.39-4.94-1.34-8.83-2.57-11.69-3.7-2.86-1.13-5.23-2.64-7.13-4.54-1.8-1.98-2.7-4.49-2.7-7.52,0-4.44,1.47-7.86,4.4-10.22,2.94-2.36,6.75-3.54,11.41-3.54,5.12,0,9.27,1.28,12.39,3.83,3.14,2.57,4.84,5.62,5.12,9.24h17.95c-.67-8.34-4.09-14.87-10.25-19.62-6.08-4.83-13.9-7.24-23.51-7.24-6.75,0-12.67,1.13-17.82,3.41-5.12,2.29-9.11,5.55-11.97,9.81C1.73,26.91.31,31.89.31,37.56c0,6.16,1.42,11.09,4.27,14.76,2.86,3.7,6.28,6.44,10.25,8.24,4.09,1.69,9.35,3.42,15.81,5.11,5.12,1.34,9.11,2.57,11.97,3.7,2.94,1.13,5.36,2.75,7.26,4.83,1.98,2.08,2.99,4.78,2.99,8.09,0,4.26-1.57,7.75-4.71,10.5-3.14,2.64-7.49,3.98-13.11,3.98s-9.63-1.36-12.67-4.11c-2.94-2.75-4.61-6.24-5-10.5H0c0,5.67,1.52,10.66,4.56,14.92,3.04,4.26,7.21,7.57,12.54,9.94l.1-.03ZM102.48,105.71c5.97,3.31,12.67,4.98,20.08,4.98s14.34-1.67,20.52-4.98c6.28-3.42,11.2-8.19,14.83-14.35,3.6-6.16,5.41-13.22,5.41-21.16s-1.75-15.02-5.28-21.16c-3.53-6.14-8.32-10.89-14.39-14.2-6.08-3.31-12.87-4.98-20.37-4.98s-14.29,1.67-20.37,4.98c-6.08,3.31-10.87,8.06-14.39,14.2-3.53,6.16-5.28,13.22-5.28,21.16s1.7,15.15,5.12,21.31c3.42,6.06,8.11,10.81,14.11,14.2ZM134.25,93.64c-3.61,1.98-7.49,2.98-11.69,2.98-6.54,0-12.03-2.29-16.38-6.83-4.27-4.65-6.41-11.17-6.41-19.62,0-5.67,1.06-10.48,3.14-14.35,2.08-3.98,4.89-6.96,8.39-8.96,3.61-1.98,7.49-2.98,11.69-2.98s8.08,1,11.69,2.98c3.6,1.98,6.51,4.98,8.7,8.96,2.19,3.88,3.27,8.68,3.27,14.35s-1.13,10.5-3.42,14.48c-2.29,3.98-5.28,6.96-8.99,8.96v.03ZM227.1,33.53c-4.66-2.46-10.02-3.7-16.09-3.7-6.85,0-13.11,1.69-18.8,5.11-5.61,3.31-10.07,8.01-13.39,14.07-3.22,6.06-4.84,13.02-4.84,20.88s1.62,14.92,4.84,21.16c3.32,6.16,7.78,10.99,13.39,14.48,5.69,3.42,11.97,5.11,18.8,5.11,5.97,0,11.3-1.23,15.96-3.7,4.74-2.57,8.5-5.67,11.25-9.37v13.07c0,7.57-2.03,13.35-6.13,17.33-3.99,3.98-9.27,5.96-15.81,5.96-5.61,0-10.45-1.28-14.52-3.83-3.99-2.46-6.59-5.72-7.83-9.81h-16.09c.95,8.53,4.94,15.25,11.97,20.18,7.03,5.03,15.86,7.52,26.5,7.52,7.98,0,14.81-1.62,20.52-4.83,5.79-3.21,10.22-7.68,13.26-13.35,3.04-5.6,4.56-11.99,4.56-19.18V31.07h-16.38v11.37c-2.65-3.59-6.36-6.57-11.12-8.96l-.05.05ZM234.8,56.13c2.29,3.98,3.42,8.68,3.42,14.07s-1.13,10.14-3.42,14.2c-2.19,3.98-5.07,7.01-8.7,9.09-3.61,2.08-7.49,3.13-11.69,3.13s-7.98-1.05-11.69-3.13c-3.6-2.18-6.57-5.32-8.83-9.37-2.19-4.08-3.27-8.81-3.27-14.2s1.08-10.04,3.27-13.92c2.29-3.98,5.23-6.96,8.83-8.96,3.6-2.08,7.49-3.13,11.69-3.13s8.08,1.05,11.69,3.13c3.6,2.08,6.51,5.11,8.7,9.09ZM332.08,33.69c-4.84-2.57-10.35-3.83-16.53-3.83-4.66,0-9.06.9-13.26,2.7-4.09,1.8-7.47,4.31-10.12,7.52v-8.96h-16.25v78.29h16.25v-43.75c0-7.01,1.75-12.35,5.28-16.05,3.61-3.8,8.45-5.67,14.52-5.67s10.87,1.9,14.39,5.67c3.5,3.7,5.28,9.04,5.28,16.05v43.75h16.09v-46.17c0-7.11-1.37-13.17-4.12-18.18-2.76-5.03-6.59-8.81-11.54-11.37ZM369.34,17.77c1.98,1.98,4.45,2.98,7.42,2.98s5.28-1,7.26-2.98c1.98-1.98,2.99-4.44,2.99-7.39s-1-5.39-2.99-7.39c-1.98-1.98-4.43-2.98-7.26-2.98s-5.41,1-7.42,2.98c-1.98,1.98-2.99,4.44-2.99,7.39s1,5.39,2.99,7.39ZM384.71,109.41V31.12h-16.25v78.29h16.25Z"/>
         </svg>
-        <span class="brand-note">Coffee workflow</span>
+        <span class="brand-note">Starting &amp; Ending Frames</span>
       </a>
       <div class="topbar-actions">
         <a class="button-ghost" href="https://www.sogni.ai/studio" target="_blank" rel="noreferrer">Open Sogni Studio</a>
@@ -1494,24 +1583,23 @@
 
     <section class="banner-hero">
       <div class="banner-frame">
-        <img src="../../assets/article-coffee-frames/11-outdoor-final.png" alt="Finished Sogni coffee product visual outdoors with whipped cream, caramel drizzle, and a pink straw.">
+        <img src="../../assets/article-coffee-frames/banner-starting-ending-frames.png" alt="Banner collage showing coffee beans, ground coffee powder, and a liquid coffee splash on a clean background.">
         <div class="banner-copy">
           <div>
-            <div class="banner-kicker">Starting &amp; Ending Frames</div>
-            <h1>You might be surprised by how much you can create with just Starting and Ending Frames.</h1>
+            <h1>Starting &amp; Ending Frames.</h1>
           </div>
           <div class="banner-stats">
             <div class="banner-stat">
-              <strong>2 frames</strong>
-              <span>Define exactly where the clip begins and ends.</span>
+              <strong>1 frame pair</strong>
+              <span>Start from one controlled beginning and one deliberate ending.</span>
             </div>
             <div class="banner-stat">
-              <strong>1 prompt</strong>
-              <span>Control the change, pacing, and camera feel.</span>
+              <strong>Cleaner landings</strong>
+              <span>Use the End Frame to reduce drift and guide how the shot resolves.</span>
             </div>
             <div class="banner-stat">
-              <strong>Full sequence</strong>
-              <span>Stitch automatically in Mixer or refine manually in Timeline.</span>
+              <strong>Longer sequences</strong>
+              <span>Chain each clip together, then stitch in Mixer or refine in Timeline.</span>
             </div>
           </div>
         </div>
@@ -1520,29 +1608,29 @@
 
     <section class="hero">
       <div class="hero-card">
-        <div class="eyebrow">From simple frame pairs to polished motion</div>
-        <h2>Build product reveals, tutorials, and cinematic transitions without stitching everything by hand.</h2>
+        <div class="eyebrow">Continuity, loops, and longer sequences</div>
+        <h2>Starting &amp; Ending Frames is one of the best tools for continuity and extending clips across generations.</h2>
         <p class="lead">
-          The creative possibilities are nearly endless, from cinematic scenes and seamless transitions to tutorials,
-          product visuals, and polished marketing shots. You do not need a complicated setup to begin. You need a clear
-          start frame, a clear end frame, and a prompt that explains what should happen between them.
+          Using a Start Frame is especially useful for extending or chaining clips. By setting the last frame of a previous
+          clip as the next clip’s start frame, you can create smoother transitions and longer sequences with more consistent
+          motion and identity.
         </p>
         <p>
-          By defining where your video begins and ends, you unlock a powerful way to shape motion, mood, and storytelling.
-          This walkthrough shows how the coffee sequence was built inside <strong>Sogni</strong>, then stitched and refined in <strong>Sogni Mixer</strong>.
+          The End Frame is optional, but it can steer where the motion resolves, reduce drift, and encourage cleaner loops.
+          Video models are great at motion, but they can drift, and reference frames help anchor the clip.
         </p>
         <div class="hero-meta">
           <div class="meta-card">
-            <span class="meta-label">Input</span>
-            <p>One starting frame, one ending frame, and a clear visual jump between them.</p>
+            <span class="meta-label">Why it matters</span>
+            <p>Keep identity, composition, and motion more consistent from clip to clip.</p>
           </div>
           <div class="meta-card">
-            <span class="meta-label">Process</span>
-            <p>Render transition clips in Sogni Create, then assemble them inside Sogni Mixer.</p>
+            <span class="meta-label">How it works</span>
+            <p>Start Frame anchors the opening. End Frame guides where the shot lands.</p>
           </div>
           <div class="meta-card">
-            <span class="meta-label">Outcome</span>
-            <p>A stitched motion sequence ready for tutorials, social posts, or premium product marketing.</p>
+            <span class="meta-label">Pro move</span>
+            <p>Reuse one clip’s End Frame as the next clip’s Start Frame to extend the sequence.</p>
           </div>
         </div>
       </div>
@@ -1565,21 +1653,21 @@
     <section class="source-block" id="source">
       <div class="source-copy">
         <div class="section-label">See the workflow</div>
-        <h2>The process is straightforward when each clip has a clear beginning and end.</h2>
+        <h2>Once the first frame pair works, the rest of the sequence becomes much easier to chain.</h2>
         <p>
           Set the <strong>Starting Frame</strong> and <strong>Ending Frame</strong> based on how you want the video to begin and end.
           You decide the motion, the transformation, the camera feel, and the final look.
         </p>
         <p>
           Then write what should happen between those two frames. Describe the change, the pacing, and the camera effect in the prompt section.
-          Repeat that logic across the sequence, then stitch the clips together in <strong>Sogni Mixer</strong>.
+          If you want to extend the sequence, reuse the last frame of one clip as the next clip’s Start Frame and repeat the logic.
         </p>
         <div class="note-card">
           This is why the workflow scales so well: the same method can generate cinematic scenes, seamless transitions,
-          tutorials, product visuals, and polished marketing shots.
+          tutorials, product visuals, polished marketing shots, and much longer sequences with better continuity.
         </div>
       </div>
-      <figure class="media-panel">
+      <figure class="media-panel media-panel-lead-video">
         <div class="asset-frame">
           <video autoplay muted loop playsinline controls preload="metadata">
             <source src="../../assets/article-coffee-frames/start-end-demo.mp4" type="video/mp4">
@@ -1595,17 +1683,18 @@
           <div class="step-number">Step 1</div>
           <h3>Open Image to Video in Sogni Create.</h3>
           <p>
-            Start in <strong>Sogni Create</strong>, open the <strong>Workflows</strong> menu, and choose <strong>Image to Video</strong>.
+            Start in <strong>Sogni Create</strong>, open the <strong>Workflows</strong> menu, and choose the <strong>LTX video model</strong> in <strong>Image to Video</strong> mode.
             This is the fastest place to begin when you already know the first and last frame you want.
           </p>
           <p>
             It is beginner-friendly and intuitive, so you can get a strong first pass quickly before moving into a more
-            advanced Studio workflow.
+            advanced Studio workflow. You can also use the <strong>Wan Image to Video</strong> option, but generation usually takes
+            longer there and it does not support audio-assisted output in the same way.
           </p>
         </div>
         <div class="step-media">
           <figure class="media-panel">
-            <div class="asset-frame">
+            <div class="asset-frame ui-shot">
               <img src="../../assets/article-coffee-frames/workflows-menu.png" alt="Sogni Create workflows menu showing the Image to Video option.">
             </div>
             <figcaption>Choose Image to Video when you want one image to transform into another with controlled motion.</figcaption>
@@ -1616,19 +1705,19 @@
       <section class="step" id="step-2">
         <div class="step-copy">
           <div class="step-number">Step 2</div>
-          <h3>Set the Starting Frame and Ending Frame for the exact transformation you want.</h3>
+          <h3>Set the first frame pair you want to turn into a clean transition.</h3>
           <p>
             The frames do more than bookend the clip. They define composition continuity, establish the direction of motion,
             and tell the model what must change by the time the shot ends.
           </p>
           <p>
-            For product work, think in short segments. One clip can move from powder to splash, another from splash to cup,
-            and another from a clean packshot to a lifestyle frame.
+            For product work, think in short segments. One clip can move from beans to powder, another from powder to splash,
+            another from splash to a clean drink shot, and another from a product shot to the final marketing frame.
           </p>
         </div>
         <div class="step-media">
           <figure class="media-panel">
-            <div class="asset-frame landscape">
+            <div class="asset-frame ui-shot">
               <img src="../../assets/article-coffee-frames/create-start-end-ui.png" alt="Sogni Create interface showing a loaded starting frame and ending frame for a coffee product transition.">
             </div>
             <figcaption>Load the beginning and ending frames, then judge whether the visual jump between them feels clean and intentional.</figcaption>
@@ -1639,27 +1728,35 @@
       <section class="step" id="step-3">
         <div class="step-copy">
           <div class="step-number">Step 3</div>
-          <h3>Write what should happen between the frames.</h3>
+          <h3>Write the first transition prompt between the beans and the ground coffee.</h3>
           <p>
-            This is where you describe the change, pacing, and camera behavior. Keep the composition stable if you
-            want a premium morph. Push it harder only when the motion needs more drama.
+            This is where you describe the change, pacing, and camera behavior. For the first clip, keep the composition stable
+            and tell the model exactly how the beans should burst, break down, and settle into the powder pile.
           </p>
           <p>
-            Below is the coffee transition prompt from this workflow, used for the powder-to-splash clip.
+            Once this first prompt works, reuse the same logic for the later beats in the sequence.
           </p>
-        </div>
-        <div class="step-media">
-          <figure class="media-panel">
-            <div class="asset-frame landscape">
-              <img src="../../assets/article-coffee-frames/create-preview-carousel.png" alt="Sogni Create preview showing a powder-to-splash transition built from a starting and ending frame pair.">
-            </div>
-            <figcaption>A frame-pair preview makes it easier to judge whether the morph direction and composition are working.</figcaption>
-          </figure>
           <div class="prompt-shell">
-            <div class="prompt-block" id="coffee-prompt">Smooth cinematic transition: a compact mound of fine coffee powder on a clean white studio background gradually liquefies from the edges inward, transforming seamlessly into glossy dark coffee liquid. The powder collapses and melts into a fluid form, preserving the same central composition and camera angle. The liquid then naturally evolves into an elegant suspended coffee splash shape. Macro product cinematography, high-speed commercial look, realistic fluid dynamics, rich espresso brown tones, soft studio reflections, minimal background, seamless morph transition, premium beverage ad style, 5 seconds.</div>
+            <div class="prompt-block" id="coffee-prompt">Ultra-realistic product photography of roasted coffee beans rising in mid-air and bursting into ultra-fine ground coffee powder, with the powder exploding outward and cascading down into a small neat pile on the surface below, isolated on a pure white background, soft subtle shadows, premium studio lighting, sharp focus, high detail, dynamic composition.</div>
             <button class="copy-button" type="button" data-copy-target="coffee-prompt">Copy prompt</button>
           </div>
           <div class="note-card"><strong>What you should have now:</strong> One clear frame pair and one transition prompt ready to render.</div>
+        </div>
+        <div class="step-media">
+          <div class="media-stack double">
+            <figure class="media-panel">
+              <div class="asset-frame">
+                <img src="../../assets/article-coffee-frames/1-beans.jpg" alt="Roasted coffee beans floating on a clean white background.">
+              </div>
+              <figcaption>Start Frame: roasted beans.</figcaption>
+            </figure>
+            <figure class="media-panel">
+              <div class="asset-frame">
+                <img src="../../assets/article-coffee-frames/2-powder.jpg" alt="Ground coffee powder on a clean white background.">
+              </div>
+              <figcaption>End Frame: fine coffee powder.</figcaption>
+            </figure>
+          </div>
         </div>
       </section>
 
@@ -1672,38 +1769,56 @@
               <p>
                 The strongest results come from chaining several simple transformations instead of asking one prompt to do everything at once.
               </p>
-              <ul>
-                <li>Clip 1: beans into ground coffee</li>
-                <li>Clip 2: ground coffee into a liquid splash</li>
-                <li>Clip 3: liquid coffee into a clean drink shot</li>
-                <li>Clip 4: the product shot into the final marketing frame</li>
-              </ul>
+              <p>
+                A good example is the second transition: use the ground coffee as the <strong>Start Frame</strong>, set the splash as the
+                <strong>End Frame</strong>, and let that pair define how the motion resolves.
+              </p>
+              <div class="note-card">
+                <strong>Add refinement beats</strong>
+                <p>If you want to make the sequence richer, add smaller refinement clips between the big beats.</p>
+                <p>In this coffee workflow, those extra passes include milk, ice, caramel drizzle, whipped cream, and the move into the outdoor lifestyle frame.</p>
+              </div>
+              <div class="note-card">
+                <strong>Clip plan</strong>
+                <p><strong>Clip 1:</strong> beans into ground coffee.</p>
+                <p><strong>Clip 2:</strong> ground coffee into a liquid splash.</p>
+                <p><strong>Clip 3:</strong> liquid coffee into a clean drink shot.</p>
+                <p><strong>Clip 4:</strong> the product shot into the final marketing frame.</p>
+              </div>
             </div>
-            <div class="media-stack double">
-              <figure class="media-panel">
-                <div class="asset-frame">
-                  <img src="../../assets/article-coffee-frames/1-beans.jpg" alt="Floating coffee beans on a white background.">
+            <div class="step-media">
+              <figure class="media-panel media-span">
+                <div class="asset-frame ui-shot">
+                  <img src="../../assets/article-coffee-frames/frame-setup-powder-to-splash.png" alt="Sogni Create interface showing ground coffee as the Start Frame and a liquid coffee splash as the End Frame for the next transition.">
                 </div>
-                <figcaption>Clip start: beans.</figcaption>
+                <figcaption>Here the powder becomes the Start Frame and the splash becomes the End Frame for the next clip in the sequence.</figcaption>
               </figure>
-              <figure class="media-panel">
-                <div class="asset-frame">
-                  <img src="../../assets/article-coffee-frames/2-powder.jpg" alt="Ground coffee powder on a white studio background.">
-                </div>
-                <figcaption>Clip end: ground coffee.</figcaption>
-              </figure>
-              <figure class="media-panel">
-                <div class="asset-frame">
-                  <img src="../../assets/article-coffee-frames/3-splash.jpg" alt="Glossy coffee splash on a white studio background.">
-                </div>
-                <figcaption>Next pair: glossy splash.</figcaption>
-              </figure>
-              <figure class="media-panel">
-                <div class="asset-frame">
-                  <img src="../../assets/article-coffee-frames/4-black-coffee.jpg" alt="Cup of black coffee on a white studio background.">
-                </div>
-                <figcaption>Then move into a drink shot.</figcaption>
-              </figure>
+              <div class="media-stack double">
+                <figure class="media-panel">
+                  <div class="asset-frame">
+                    <img src="../../assets/article-coffee-frames/1-beans.jpg" alt="Floating coffee beans on a white background.">
+                  </div>
+                  <figcaption>Clip start: beans.</figcaption>
+                </figure>
+                <figure class="media-panel">
+                  <div class="asset-frame">
+                    <img src="../../assets/article-coffee-frames/2-powder.jpg" alt="Ground coffee powder on a white studio background.">
+                  </div>
+                  <figcaption>Clip end: ground coffee.</figcaption>
+                </figure>
+                <figure class="media-panel">
+                  <div class="asset-frame">
+                    <img src="../../assets/article-coffee-frames/3-splash.jpg" alt="Glossy coffee splash on a white studio background.">
+                  </div>
+                  <figcaption>Next pair: glossy splash.</figcaption>
+                </figure>
+                <figure class="media-panel">
+                  <div class="asset-frame">
+                    <img src="../../assets/article-coffee-frames/4-black-coffee.jpg" alt="Cup of black coffee on a white studio background.">
+                  </div>
+                  <figcaption>Then move into a drink shot.</figcaption>
+                </figure>
+              </div>
             </div>
           </div>
 
@@ -1711,12 +1826,12 @@
             <div class="step-paired-copy">
               <p>
                 Because each clip has its own frame pair, you can keep the camera angle, composition, and product geometry
-                consistent while still evolving the scene.
+                consistent while still evolving the scene. That gives you a cleaner foundation before you move into finishing passes.
               </p>
               <p>
-                That is what makes the final sequence feel designed rather than random.
+                The middle refinements are what turn a simple drink shot into a full product build.
               </p>
-              <div class="note-card"><strong>What you should have now:</strong> A set of short transition clips that cover the whole product story.</div>
+              <div class="note-card"><strong>What you should have now:</strong> A set of short transition clips and refinement beats that cover the whole product story.</div>
             </div>
             <div class="media-stack double">
               <figure class="media-panel">
@@ -1745,6 +1860,55 @@
               </figure>
             </div>
           </div>
+
+          <div class="step-paired-row">
+            <div class="step-paired-copy">
+              <p>
+                A practical way to build this workflow is to generate still images for every stage first. If you want stronger repeatability and tighter detail
+                continuity, use an editing model such as <strong>Qwen Image Edit</strong> or <strong>Flux2</strong> and guide the model step by step so even
+                the small product details stay stable from one image to the next.
+              </p>
+              <p>
+                Once you have the full set of images, decide which shots work best together as frame pairs. That makes it much easier to build each
+                transition intentionally instead of guessing the sequence while you render.
+              </p>
+              <div class="note-card"><strong>What you should have now:</strong> A clear multi-clip plan plus a few strong transition examples you can render, compare, and stitch together.</div>
+            </div>
+            <div class="media-stack double video-example-grid">
+              <figure class="media-panel">
+                <div class="asset-frame">
+                  <video autoplay muted loop playsinline controls preload="metadata">
+                    <source src="../../assets/article-coffee-frames/clip-1-beans-to-powder.mp4" type="video/mp4">
+                  </video>
+                </div>
+                <figcaption>Example clip: beans into powder.</figcaption>
+              </figure>
+              <figure class="media-panel">
+                <div class="asset-frame">
+                  <video autoplay muted loop playsinline controls preload="metadata">
+                    <source src="../../assets/article-coffee-frames/clip-2-powder-to-splash.mp4" type="video/mp4">
+                  </video>
+                </div>
+                <figcaption>Example clip: powder into splash.</figcaption>
+              </figure>
+              <figure class="media-panel">
+                <div class="asset-frame">
+                  <video autoplay muted loop playsinline controls preload="metadata">
+                    <source src="../../assets/article-coffee-frames/clip-3-drink-build.mp4" type="video/mp4">
+                  </video>
+                </div>
+                <figcaption>Example clip: build the clean drink shot.</figcaption>
+              </figure>
+              <figure class="media-panel">
+                <div class="asset-frame">
+                  <video autoplay muted loop playsinline controls preload="metadata">
+                    <source src="../../assets/article-coffee-frames/clip-4-final-marketing.mp4" type="video/mp4">
+                  </video>
+                </div>
+                <figcaption>Example clip: product shot into the final marketing frame.</figcaption>
+              </figure>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -1768,7 +1932,7 @@
               <div class="note-card"><strong>What you should have now:</strong> One stitched draft with the overall order and pacing already working.</div>
             </div>
             <figure class="media-panel">
-              <div class="asset-frame landscape">
+              <div class="asset-frame ui-shot">
                 <img src="../../assets/article-coffee-frames/clip-mixer-list.png" alt="Sogni Clip Mixer list view showing multiple coffee clips ready to be stitched together.">
               </div>
               <figcaption>Clip Mixer assembles multiple transition clips into one clean sequence without rebuilding everything by hand.</figcaption>
@@ -1791,10 +1955,10 @@
                 You can tweak playback speed, preview changes in real time, navigate frame by frame, manage audio, loop clips,
                 and refine the sequence visually until the motion feels deliberate.
               </p>
-              <div class="note-card">This gives you both automatic stitching and full manual control when you need it.</div>
+              <div class="note-card"><strong>What you should have now:</strong> This gives you both automatic stitching and full manual control when you need it.</div>
             </div>
             <figure class="media-panel">
-              <div class="asset-frame">
+              <div class="asset-frame ui-shot">
                 <img src="../../assets/article-coffee-frames/clip-mixer-timeline.png" alt="Sogni Clip Mixer timeline view showing exact clip order and pacing controls.">
               </div>
               <figcaption>Timeline view gives you precise control over clip length, order, timing, and playback feel.</figcaption>
@@ -1849,7 +2013,7 @@
           <path fill="currentColor" d="M17.2,106.99c5.33,2.29,11.3,3.41,17.95,3.41,7.03,0,13.11-1.33,18.23-3.98,5.23-2.75,9.17-6.34,11.82-10.81,2.76-4.44,4.12-9.19,4.12-14.2,0-6.24-1.47-11.22-4.43-14.92-2.86-3.8-6.36-6.57-10.53-8.37-4.09-1.8-9.4-3.59-15.96-5.39-4.94-1.34-8.83-2.57-11.69-3.7-2.86-1.13-5.23-2.64-7.13-4.54-1.8-1.98-2.7-4.49-2.7-7.52,0-4.44,1.47-7.86,4.4-10.22,2.94-2.36,6.75-3.54,11.41-3.54,5.12,0,9.27,1.28,12.39,3.83,3.14,2.57,4.84,5.62,5.12,9.24h17.95c-.67-8.34-4.09-14.87-10.25-19.62-6.08-4.83-13.9-7.24-23.51-7.24-6.75,0-12.67,1.13-17.82,3.41-5.12,2.29-9.11,5.55-11.97,9.81C1.73,26.91.31,31.89.31,37.56c0,6.16,1.42,11.09,4.27,14.76,2.86,3.7,6.28,6.44,10.25,8.24,4.09,1.69,9.35,3.42,15.81,5.11,5.12,1.34,9.11,2.57,11.97,3.7,2.94,1.13,5.36,2.75,7.26,4.83,1.98,2.08,2.99,4.78,2.99,8.09,0,4.26-1.57,7.75-4.71,10.5-3.14,2.64-7.49,3.98-13.11,3.98s-9.63-1.36-12.67-4.11c-2.94-2.75-4.61-6.24-5-10.5H0c0,5.67,1.52,10.66,4.56,14.92,3.04,4.26,7.21,7.57,12.54,9.94l.1-.03ZM102.48,105.71c5.97,3.31,12.67,4.98,20.08,4.98s14.34-1.67,20.52-4.98c6.28-3.42,11.2-8.19,14.83-14.35,3.6-6.16,5.41-13.22,5.41-21.16s-1.75-15.02-5.28-21.16c-3.53-6.14-8.32-10.89-14.39-14.2-6.08-3.31-12.87-4.98-20.37-4.98s-14.29,1.67-20.37,4.98c-6.08,3.31-10.87,8.06-14.39,14.2-3.53,6.16-5.28,13.22-5.28,21.16s1.7,15.15,5.12,21.31c3.42,6.06,8.11,10.81,14.11,14.2ZM134.25,93.64c-3.61,1.98-7.49,2.98-11.69,2.98-6.54,0-12.03-2.29-16.38-6.83-4.27-4.65-6.41-11.17-6.41-19.62,0-5.67,1.06-10.48,3.14-14.35,2.08-3.98,4.89-6.96,8.39-8.96,3.61-1.98,7.49-2.98,11.69-2.98s8.08,1,11.69,2.98c3.6,1.98,6.51,4.98,8.7,8.96,2.19,3.88,3.27,8.68,3.27,14.35s-1.13,10.5-3.42,14.48c-2.29,3.98-5.28,6.96-8.99,8.96v.03ZM227.1,33.53c-4.66-2.46-10.02-3.7-16.09-3.7-6.85,0-13.11,1.69-18.8,5.11-5.61,3.31-10.07,8.01-13.39,14.07-3.22,6.06-4.84,13.02-4.84,20.88s1.62,14.92,4.84,21.16c3.32,6.16,7.78,10.99,13.39,14.48,5.69,3.42,11.97,5.11,18.8,5.11,5.97,0,11.3-1.23,15.96-3.7,4.74-2.57,8.5-5.67,11.25-9.37v13.07c0,7.57-2.03,13.35-6.13,17.33-3.99,3.98-9.27,5.96-15.81,5.96-5.61,0-10.45-1.28-14.52-3.83-3.99-2.46-6.59-5.72-7.83-9.81h-16.09c.95,8.53,4.94,15.25,11.97,20.18,7.03,5.03,15.86,7.52,26.5,7.52,7.98,0,14.81-1.62,20.52-4.83,5.79-3.21,10.22-7.68,13.26-13.35,3.04-5.6,4.56-11.99,4.56-19.18V31.07h-16.38v11.37c-2.65-3.59-6.36-6.57-11.12-8.96l-.05.05ZM234.8,56.13c2.29,3.98,3.42,8.68,3.42,14.07s-1.13,10.14-3.42,14.2c-2.19,3.98-5.07,7.01-8.7,9.09-3.61,2.08-7.49,3.13-11.69,3.13s-7.98-1.05-11.69-3.13c-3.6-2.18-6.57-5.32-8.83-9.37-2.19-4.08-3.27-8.81-3.27-14.2s1.08-10.04,3.27-13.92c2.29-3.98,5.23-6.96,8.83-8.96,3.6-2.08,7.49-3.13,11.69-3.13s8.08,1.05,11.69,3.13c3.6,2.08,6.51,5.11,8.7,9.09ZM332.08,33.69c-4.84-2.57-10.35-3.83-16.53-3.83-4.66,0-9.06.9-13.26,2.7-4.09,1.8-7.47,4.31-10.12,7.52v-8.96h-16.25v78.29h16.25v-43.75c0-7.01,1.75-12.35,5.28-16.05,3.61-3.8,8.45-5.67,14.52-5.67s10.87,1.9,14.39,5.67c3.5,3.7,5.28,9.04,5.28,16.05v43.75h16.09v-46.17c0-7.11-1.37-13.17-4.12-18.18-2.76-5.03-6.59-8.81-11.54-11.37ZM369.34,17.77c1.98,1.98,4.45,2.98,7.42,2.98s5.28-1,7.26-2.98c1.98-1.98,2.99-4.44,2.99-7.39s-1-5.39-2.99-7.39c-1.98-1.98-4.43-2.98-7.26-2.98s-5.41,1-7.42,2.98c-1.98,1.98-2.99,4.44-2.99,7.39s1,5.39,2.99,7.39ZM384.71,109.41V31.12h-16.25v78.29h16.25Z"/>
         </svg>
       </a>
-      <p class="footer-meta">Sogni Article · Starting &amp; Ending Frames · Coffee · <a href="https://www.sogni.ai/" target="_blank" rel="noreferrer">sogni.ai</a></p>
+      <p class="footer-meta">Sogni Article · Starting &amp; Ending Frames · <a href="https://www.sogni.ai/" target="_blank" rel="noreferrer">sogni.ai</a></p>
       <p class="footer-copy">© 2026 Sogni. All rights reserved.</p>
     </footer>
   </div>

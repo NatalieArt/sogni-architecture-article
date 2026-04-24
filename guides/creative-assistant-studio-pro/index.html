@@ -48,6 +48,7 @@
 
     html {
       scroll-behavior: smooth;
+      -webkit-text-size-adjust: 100%;
     }
 
     body {
@@ -173,52 +174,55 @@
     }
 
     .banner-frame {
-      display: grid;
-      grid-template-columns: minmax(0, 1.08fr) minmax(320px, 0.92fr);
-      gap: 0;
-      align-items: stretch;
+      position: relative;
+      overflow: hidden;
       border-radius: var(--radius-lg);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+      background: rgba(255, 255, 255, 0.03);
+      min-height: 336px;
+    }
+
+    .banner-frame::after {
+      content: "";
+      position: absolute;
+      inset: 0;
       background:
-        radial-gradient(circle at top, rgba(0, 255, 157, 0.08), transparent 38%),
-        rgba(255, 255, 255, 0.03);
-      min-height: 0;
+        linear-gradient(180deg, rgba(4, 8, 5, 0.1) 0%, rgba(4, 8, 5, 0.16) 34%, rgba(4, 8, 5, 0.82) 100%),
+        linear-gradient(90deg, rgba(0, 0, 0, 0.52) 0%, rgba(0, 0, 0, 0.08) 48%, rgba(0, 0, 0, 0.22) 100%);
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .banner-visual::before {
+      content: none;
     }
 
     .banner-visual {
       position: relative;
-      overflow: hidden;
-      min-width: 0;
-      order: 2;
-      background: #06110a;
-      display: flex;
-      align-items: stretch;
-      justify-content: stretch;
-      padding: 0;
-    }
-
-    .banner-visual::after {
-      content: none;
+      inset: 0;
+      width: 100%;
+      height: 100%;
     }
 
     .banner-frame img {
       width: 100%;
-      max-width: none;
       height: 100%;
-      max-height: none;
+      display: block;
       object-fit: cover;
-      object-position: center;
-      border-radius: 0;
+      object-position: center 63%;
     }
 
     .banner-copy {
-      position: relative;
-      order: 1;
+      position: absolute;
+      left: 28px;
+      right: 28px;
+      bottom: 24px;
+      z-index: 2;
       display: grid;
-      grid-template-columns: minmax(0, 1fr);
-      gap: 22px;
-      align-content: center;
-      padding: 32px;
-      min-width: 0;
+      grid-template-columns: minmax(0, 1fr) minmax(320px, 460px);
+      gap: 24px;
+      align-items: end;
     }
 
     .banner-kicker,
@@ -256,13 +260,13 @@
     }
 
     .banner-kicker {
-      margin-bottom: 14px;
+      margin-bottom: 12px;
     }
 
     .banner-copy h1 {
       margin: 0;
-      max-width: 520px;
-      font-size: clamp(1.7rem, 3vw, 2.75rem);
+      max-width: 620px;
+      font-size: clamp(1.92rem, 4.1vw, 3.46rem);
       line-height: 1.02;
       text-align: left;
       text-wrap: balance;
@@ -273,28 +277,71 @@
 
     .banner-stats {
       display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
+      grid-template-columns: 1fr;
       gap: 12px;
     }
 
     .banner-stat {
-      padding: 14px 16px;
+      padding: 16px 18px;
       border-radius: 18px;
       border: 1px solid rgba(255, 255, 255, 0.08);
-      background: rgba(4, 8, 5, 0.58);
+      background: rgba(8, 11, 8, 0.56);
       backdrop-filter: blur(16px);
       -webkit-backdrop-filter: blur(16px);
+      box-shadow: 0 16px 34px rgba(0, 0, 0, 0.22);
     }
 
     .banner-stat strong {
       display: block;
-      font-size: 1rem;
-      margin-bottom: 2px;
+      font-size: 0.92rem;
+      margin-bottom: 3px;
     }
 
     .banner-stat span {
       color: var(--muted);
-      font-size: 0.85rem;
+      font-size: 0.84rem;
+      line-height: 1.55;
+    }
+
+    .mode-list {
+      list-style: none;
+      margin: 18px 0;
+      padding: 0;
+      display: grid;
+      gap: 12px;
+    }
+
+    .mode-list li {
+      padding: 16px 18px;
+      border-radius: 18px;
+      border: 1px solid var(--line);
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.035), rgba(255, 255, 255, 0.02)),
+        linear-gradient(135deg, rgba(0, 255, 157, 0.06), transparent 60%);
+      display: grid;
+      gap: 6px;
+    }
+
+    .mode-list strong {
+      display: block;
+      color: var(--accent);
+      font-family: var(--font-display);
+      font-size: 1.08rem;
+      font-weight: 800;
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+      text-transform: none;
+    }
+
+    .mode-accent {
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    .mode-list span {
+      color: var(--muted-strong);
+      font-size: 0.98rem;
+      line-height: 1.55;
     }
 
     .hero {
@@ -443,6 +490,8 @@
     }
 
     .side-list a span:last-child {
+      flex: 1 1 auto;
+      min-width: 0;
       font-size: 0.92rem;
       line-height: 1.28;
     }
@@ -476,7 +525,7 @@
     .source-block,
     .step {
       display: grid;
-      grid-template-columns: minmax(320px, 0.76fr) minmax(0, 1.24fr);
+      grid-template-columns: minmax(320px, 0.84fr) minmax(0, 1.16fr);
       gap: 34px;
       margin-bottom: 24px;
       padding: 30px;
@@ -557,6 +606,24 @@
     .prompt-shell {
       position: relative;
       margin-top: 18px;
+    }
+
+    .prompt-intro {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 18px;
+      color: var(--accent);
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .prompt-intro::before {
+      content: "↓";
+      font-size: 0.96rem;
+      line-height: 1;
     }
 
     .prompt-block {
@@ -658,7 +725,7 @@
 
     .step-paired-row {
       display: grid;
-      grid-template-columns: minmax(320px, 0.76fr) minmax(0, 1.24fr);
+      grid-template-columns: minmax(320px, 0.84fr) minmax(0, 1.16fr);
       gap: 34px;
       align-items: start;
     }
@@ -702,6 +769,18 @@
       box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.02);
     }
 
+    @media (min-width: 901px) {
+      .source-block > .media-panel,
+      .step-media > .media-panel,
+      .step-media > .compare-panel,
+      .step-media > .compare-layout,
+      .step-paired-row > .media-panel,
+      .step-paired-row > .compare-panel {
+        width: min(100%, 94%);
+        justify-self: center;
+      }
+    }
+
     .asset-frame {
       overflow: hidden;
       border-radius: 22px;
@@ -732,6 +811,27 @@
     .media-panel figcaption {
       margin-top: 14px;
       font-size: 0.95rem;
+    }
+
+    .compare-layout {
+      display: grid;
+      grid-template-columns: minmax(240px, 0.72fr) minmax(0, 1.28fr);
+      gap: 18px;
+      align-items: start;
+      margin-top: 18px;
+    }
+
+    .compare-support {
+      display: grid;
+      gap: 14px;
+    }
+
+    .compare-support p {
+      margin: 0;
+    }
+
+    .activity-lead-copy {
+      margin-top: 24px !important;
     }
 
     .media-panel-project-name .asset-frame {
@@ -794,7 +894,7 @@
       border: 1px solid rgba(255, 255, 255, 0.08);
       background: #020302;
       isolation: isolate;
-      touch-action: none;
+      touch-action: pan-y;
       cursor: ew-resize;
     }
 
@@ -1133,7 +1233,6 @@
     }
 
     @media (max-width: 1180px) {
-      .banner-copy,
       .hero,
       .source-block,
       .step {
@@ -1145,14 +1244,15 @@
         grid-template-columns: 1fr;
       }
 
-      .banner-frame {
+      .banner-copy {
+        position: static;
+        padding: 24px;
+        background: linear-gradient(180deg, transparent, rgba(5, 8, 4, 0.9));
         grid-template-columns: 1fr;
       }
 
-      .banner-visual {
-        order: -1;
-        border-bottom: 1px solid var(--line);
-        min-height: 260px;
+      .banner-frame::after {
+        background: linear-gradient(180deg, rgba(5, 8, 4, 0.12), rgba(5, 8, 4, 0.3));
       }
 
       .step-paired-row {
@@ -1186,12 +1286,19 @@
       }
 
       .topbar-actions {
+        width: 100%;
         flex-direction: row;
         flex-wrap: wrap;
       }
 
+      .topbar-actions > * {
+        flex: 1 1 100%;
+      }
+
       .button,
       .button-ghost {
+        width: 100%;
+        min-height: 44px;
         padding: 11px 16px;
         font-size: 0.85rem;
       }
@@ -1224,6 +1331,7 @@
 
       .banner-copy {
         padding: 18px;
+        gap: 10px;
       }
 
       .banner-stats {
@@ -1236,7 +1344,7 @@
       }
 
       .banner-stats {
-        gap: 8px;
+        gap: 6px;
       }
 
       .banner-stat {
@@ -1245,19 +1353,34 @@
       }
 
       .banner-stat strong {
-        font-size: 0.9rem;
+        font-size: 0.86rem;
       }
 
       .banner-stat span {
-        font-size: 0.8rem;
+        font-size: 0.76rem;
       }
 
       .hero-card h2 {
         font-size: clamp(1.3rem, 5vw, 1.8rem);
       }
 
+      .hero-card h2 span {
+        white-space: normal !important;
+      }
+
       .lead {
         font-size: 1rem;
+      }
+
+      .hero {
+        gap: 18px;
+        padding-bottom: 24px;
+      }
+
+      .source-block,
+      .step,
+      .step-paired-row {
+        scroll-margin-top: 28px;
       }
 
       .hero-meta {
@@ -1298,9 +1421,27 @@
         gap: 20px;
       }
 
+      .compare-layout {
+        grid-template-columns: 1fr;
+        gap: 14px;
+      }
+
+      .mode-list li {
+        padding: 14px 16px;
+      }
+
+      .mode-list span {
+        font-size: 0.92rem;
+      }
+
+      .prompt-shell {
+        margin-top: 16px;
+      }
+
       .prompt-block {
-        font-size: 0.55rem;
-        padding: 10px 12px;
+        font-size: 0.72rem;
+        line-height: 1.72;
+        padding: 12px 14px;
       }
 
       .media-panel,
@@ -1335,6 +1476,10 @@
         width: 36px;
         height: 36px;
         font-size: 0.85rem;
+      }
+
+      .compare-header {
+        align-items: flex-start;
       }
 
       .link-grid {
@@ -1405,8 +1550,12 @@
       }
 
       .copy-button {
-        font-size: 0.6rem;
-        padding: 6px 10px;
+        position: static;
+        width: 100%;
+        min-height: 40px;
+        margin-top: 10px;
+        font-size: 0.66rem;
+        padding: 8px 10px;
       }
     }
 
@@ -1430,10 +1579,11 @@
 
       .banner-visual {
         min-height: 220px;
+        padding: 0;
       }
 
       .banner-copy {
-        padding: 14px;
+        padding: 0;
       }
 
       .banner-copy h1 {
@@ -1478,6 +1628,7 @@
 
       .button,
       .button-ghost {
+        min-height: 42px;
         padding: 10px 14px;
         font-size: 0.82rem;
       }
@@ -1490,8 +1641,18 @@
         gap: 16px;
       }
 
+      .compare-layout {
+        grid-template-columns: 1fr;
+        gap: 14px;
+      }
+
       .link-card {
         padding: 14px;
+      }
+
+      .prompt-block {
+        font-size: 0.68rem;
+        padding: 11px 12px;
       }
     }
   </style>
@@ -1518,8 +1679,7 @@
         </div>
         <div class="banner-copy">
           <div>
-            <div class="banner-kicker">Sogni Studio / Pro</div>
-            <h1>Meet the New Creative Assistant in Sogni Studio / Pro.</h1>
+            <h1>Meet the New Creative Assistant.</h1>
           </div>
           <div class="banner-stats">
             <div class="banner-stat">
@@ -1542,11 +1702,11 @@
     <section class="hero">
       <div class="hero-card">
         <div class="eyebrow">Chat-first creation, guided controls, or full manual mode</div>
-        <h2>Tell it what you want. Or guide it. Or take the wheel yourself.</h2>
+        <h2>Tell it what you want. <span style="white-space: nowrap;">Or guide it.</span> <span style="display: block;">Or take the wheel yourself.</span></h2>
         <p class="lead">
-          The new <strong>Creative Assistant</strong> is now available in <strong>Sogni Studio</strong> and <strong>Sogni Pocket</strong>.
-          It introduces three ways to create: <strong>Agent mode</strong> for chat-first creation, <strong>Guided mode</strong> for chat with controls,
-          and <strong>Manual mode</strong> for the classic workflow.
+          The new <strong>Creative Assistant</strong> is now available in <strong>Sogni</strong>.
+          It introduces three ways to create: <strong class="mode-accent">Agent mode</strong> for chat-first creation, <strong class="mode-accent">Guided mode</strong> for chat with controls,
+          and <strong class="mode-accent">Manual mode</strong> for the classic workflow.
         </p>
         <p>
           You bring the imagination. The Assistant helps with image generation, editing, video and music creation, prompt writing,
@@ -1588,16 +1748,26 @@
       <div class="source-copy">
         <div class="section-label">Meet the modes</div>
         <h2>The new assistant gives you three ways to create without locking you into one workflow.</h2>
-        <p>
-          <strong>Agent mode</strong> is for chat-first creation. <strong>Guided mode</strong> keeps the conversation visible while still giving you controls.
-          <strong>Manual mode</strong> leaves the assistant behind and returns you to the classic hands-on workflow.
-        </p>
+        <ul class="mode-list">
+          <li>
+            <strong>Agent mode</strong>
+            <span>Chat-first creation when you want to describe the idea and let the assistant shape the setup for you.</span>
+          </li>
+          <li>
+            <strong>Guided mode</strong>
+            <span>Keeps the conversation visible while still giving you direct controls, so chat and settings stay in the same flow.</span>
+          </li>
+          <li>
+            <strong>Manual mode</strong>
+            <span>Leaves the assistant behind and returns you to the classic hands-on workflow whenever you want more precision.</span>
+          </li>
+        </ul>
         <p>
           That means you can start with a conversation, let the assistant help shape the setup, and then move into direct controls
           whenever you want more precision. It is flexible on purpose.
         </p>
         <div class="note-card">
-          Guided mode makes the value obvious right away: the assistant can suggest tasks like analyzing an image, enhancing a prompt,
+          <span class="mode-accent">Guided mode</span> makes the value obvious right away: the assistant can suggest tasks like analyzing an image, enhancing a prompt,
           creating an article cover, transferring motion to a character, or answering product questions before you even type.
         </div>
       </div>
@@ -1644,11 +1814,11 @@
           <p>
             That is the point of the Creative Assistant. You say what should happen, and it starts setting up the right path for image editing on its own.
           </p>
+          <div class="prompt-intro">Be sure to test the viral balloon prompt for yourself.</div>
           <div class="prompt-shell">
             <div class="prompt-block" id="assistant-edit-prompt">Transform the person in the scene into a glossy inflatable plastic balloon character, while preserving their facial features as detailed 3D balloon-like forms.</div>
             <button class="copy-button" type="button" data-copy-target="assistant-edit-prompt">Copy image prompt</button>
           </div>
-          <div class="note-card">Be sure to test the viral balloon prompt for yourself.</div>
         </div>
         <div class="step-media">
           <figure class="media-panel">
@@ -1697,11 +1867,6 @@
                 In this example, it proposes <strong>Animate it</strong>, <strong>Try a different style</strong>, <strong>Upscale it</strong>, and <strong>Change angle</strong>.
                 The output is not a dead end. It becomes the start of the next move.
               </p>
-              <p>
-                If you want to show the transformation more clearly, this is also the perfect moment to compare the original source image
-                with the balloon version side by side.
-              </p>
-              <div class="note-card"><strong>What you should have now:</strong> A finished edited image, the reasoning behind the result, and a set of guided suggestions for the next creative step.</div>
             </div>
             <div class="step-media">
               <figure class="media-panel">
@@ -1710,26 +1875,32 @@
                 </div>
                 <figcaption>The assistant completes the edit, shows the final image, and keeps the workflow moving with clear suggested actions.</figcaption>
               </figure>
-              <div class="compare-panel">
-                <div class="compare-header">
-                  <div class="compare-title">Before / After</div>
-                  <div class="compare-badges">
-                    <span class="badge">Before</span>
-                    <span class="badge badge-accent">After</span>
-                  </div>
+            </div>
+          </div>
+          <div class="step-paired-row">
+            <div class="compare-support">
+              <p>If you want to show the transformation more clearly, this is also the perfect moment to compare the original source image with the balloon version side by side.</p>
+              <div class="note-card"><strong>What you should have now:</strong> A finished edited image, the reasoning behind the result, and a set of guided suggestions for the next creative step.</div>
+            </div>
+            <div class="compare-panel">
+              <div class="compare-header">
+                <div class="compare-title">Before / After</div>
+                <div class="compare-badges">
+                  <span class="badge">Before</span>
+                  <span class="badge badge-accent">After</span>
                 </div>
-                <div class="compare" data-compare>
-                  <span class="compare-chip before">Before</span>
-                  <span class="compare-chip after">After</span>
-                  <img src="../../assets/article-creative-assistant/8-source-before-square.png" alt="Original source photo before the Creative Assistant transformed it into a balloon character.">
-                  <div class="compare-after">
-                    <img src="../../assets/article-creative-assistant/8-balloon-after.png" alt="Balloon-style result after the Creative Assistant transformed the source image.">
-                  </div>
-                  <div class="compare-handle"></div>
-                  <input type="range" min="0" max="100" value="52" aria-label="Adjust before and after comparison">
-                </div>
-                <div class="compare-note">Drag anywhere on the image or use the slider to compare the original photo with the finished balloon transformation.</div>
               </div>
+              <div class="compare" data-compare>
+                <span class="compare-chip before">Before</span>
+                <span class="compare-chip after">After</span>
+                <img src="../../assets/article-creative-assistant/8-source-before-square.png" alt="Original source photo before the Creative Assistant transformed it into a balloon character.">
+                <div class="compare-after">
+                  <img src="../../assets/article-creative-assistant/8-balloon-after.png" alt="Balloon-style result after the Creative Assistant transformed the source image.">
+                </div>
+                <div class="compare-handle"></div>
+                <input type="range" min="0" max="100" value="52" aria-label="Adjust before and after comparison">
+              </div>
+              <div class="compare-note">Drag anywhere on the image or use the slider to compare the original photo with the finished balloon transformation.</div>
             </div>
           </div>
         </div>
@@ -1760,19 +1931,22 @@
                 And if you want to check what is happening in the background while the job runs, you can always open the Activity view.
                 It shows what is active, what is ready for review, what was already reviewed, and the queue details without breaking the flow.
               </p>
-              <p>
+              <p class="activity-lead-copy">
                 Activity gives you a live view of what the agent is imagining now, what is ready next, and how the queue is moving.
               </p>
               <div class="note-card"><strong>What you can check here anytime:</strong> A live preview of the running job, plus enough system feedback to understand what the agent is doing without leaving the workflow.</div>
-              <p>
-                Activity view in Sogni Studio showing the Supernet queue with one active generation, ready items, and reviewed items.
-              </p>
             </div>
             <div class="step-media">
               <figure class="media-panel">
                 <div class="asset-frame landscape">
+                  <img src="../../assets/article-creative-assistant/9-step5-video-screen.png" alt="Creative Assistant showing the finished balloon character video preview together with follow-up actions like Generate voiceover, Create more clips, and Make a visualizer.">
+                </div>
+              </figure>
+              <figure class="media-panel">
+                <div class="asset-frame landscape">
                   <img src="../../assets/article-creative-assistant/6-preview-activity.png" alt="Activity view in Sogni Studio showing the Supernet queue with one active generation, ready items, and reviewed items.">
                 </div>
+                <figcaption>Activity view in Sogni Studio showing the Supernet queue with one active generation, ready items, and reviewed items.</figcaption>
               </figure>
             </div>
           </div>
@@ -1797,13 +1971,9 @@
             </div>
             <figure class="media-panel">
               <div class="asset-frame">
-                <video controls playsinline preload="metadata" poster="../../assets/article-creative-assistant/8-balloon-after.png">
+                <video data-final-video autoplay muted loop controls playsinline preload="auto" poster="../../assets/article-creative-assistant/8-balloon-after.png">
                   <source src="../../assets/article-creative-assistant/balloon-trump-video.mp4" type="video/mp4">
                 </video>
-              </div>
-              <figcaption>The completed video stays in its original square ratio. Press play to watch it with sound and review the final result directly in the article.</figcaption>
-              <div class="closing-actions">
-                <a class="button-ghost" href="../../assets/article-creative-assistant/balloon-trump-video.mp4" target="_blank" rel="noreferrer">Open final video</a>
               </div>
             </figure>
           </div>
@@ -1819,7 +1989,7 @@
         and still drop back into manual mode whenever you want.
       </p>
       <p>
-        Use the assistant when you want momentum. Use Guided mode when you want help plus controls. Use Manual mode when you want the classic hands-on path.
+        Use the assistant when you want momentum. Use <span class="mode-accent">Guided mode</span> when you want help plus controls. Use <span class="mode-accent">Manual mode</span> when you want the classic hands-on path.
       </p>
       <div class="closing-actions">
         <a class="button" href="https://www.sogni.ai/studio" target="_blank" rel="noreferrer">Open Sogni Studio</a>
@@ -1830,7 +2000,7 @@
           <div class="link-top">
             <span class="link-badge badge-360">Studio</span>
           </div>
-          <strong>Sogni Studio / Pro</strong>
+          <strong>Sogni Studio</strong>
           <span>Use the Creative Assistant when you want chat-first creation, guided help, and deeper desktop control.</span>
         </a>
         <a class="link-card link-card-studio" href="https://app.sogni.ai/create" target="_blank" rel="noreferrer">
@@ -1856,7 +2026,7 @@
           <path fill="currentColor" d="M17.2,106.99c5.33,2.29,11.3,3.41,17.95,3.41,7.03,0,13.11-1.33,18.23-3.98,5.23-2.75,9.17-6.34,11.82-10.81,2.76-4.44,4.12-9.19,4.12-14.2,0-6.24-1.47-11.22-4.43-14.92-2.86-3.8-6.36-6.57-10.53-8.37-4.09-1.8-9.4-3.59-15.96-5.39-4.94-1.34-8.83-2.57-11.69-3.7-2.86-1.13-5.23-2.64-7.13-4.54-1.8-1.98-2.7-4.49-2.7-7.52,0-4.44,1.47-7.86,4.4-10.22,2.94-2.36,6.75-3.54,11.41-3.54,5.12,0,9.27,1.28,12.39,3.83,3.14,2.57,4.84,5.62,5.12,9.24h17.95c-.67-8.34-4.09-14.87-10.25-19.62-6.08-4.83-13.9-7.24-23.51-7.24-6.75,0-12.67,1.13-17.82,3.41-5.12,2.29-9.11,5.55-11.97,9.81C1.73,26.91.31,31.89.31,37.56c0,6.16,1.42,11.09,4.27,14.76,2.86,3.7,6.28,6.44,10.25,8.24,4.09,1.69,9.35,3.42,15.81,5.11,5.12,1.34,9.11,2.57,11.97,3.7,2.94,1.13,5.36,2.75,7.26,4.83,1.98,2.08,2.99,4.78,2.99,8.09,0,4.26-1.57,7.75-4.71,10.5-3.14,2.64-7.49,3.98-13.11,3.98s-9.63-1.36-12.67-4.11c-2.94-2.75-4.61-6.24-5-10.5H0c0,5.67,1.52,10.66,4.56,14.92,3.04,4.26,7.21,7.57,12.54,9.94l.1-.03ZM102.48,105.71c5.97,3.31,12.67,4.98,20.08,4.98s14.34-1.67,20.52-4.98c6.28-3.42,11.2-8.19,14.83-14.35,3.6-6.16,5.41-13.22,5.41-21.16s-1.75-15.02-5.28-21.16c-3.53-6.14-8.32-10.89-14.39-14.2-6.08-3.31-12.87-4.98-20.37-4.98s-14.29,1.67-20.37,4.98c-6.08,3.31-10.87,8.06-14.39,14.2-3.53,6.16-5.28,13.22-5.28,21.16s1.7,15.15,5.12,21.31c3.42,6.06,8.11,10.81,14.11,14.2ZM134.25,93.64c-3.61,1.98-7.49,2.98-11.69,2.98-6.54,0-12.03-2.29-16.38-6.83-4.27-4.65-6.41-11.17-6.41-19.62,0-5.67,1.06-10.48,3.14-14.35,2.08-3.98,4.89-6.96,8.39-8.96,3.61-1.98,7.49-2.98,11.69-2.98s8.08,1,11.69,2.98c3.6,1.98,6.51,4.98,8.7,8.96,2.19,3.88,3.27,8.68,3.27,14.35s-1.13,10.5-3.42,14.48c-2.29,3.98-5.28,6.96-8.99,8.96v.03ZM227.1,33.53c-4.66-2.46-10.02-3.7-16.09-3.7-6.85,0-13.11,1.69-18.8,5.11-5.61,3.31-10.07,8.01-13.39,14.07-3.22,6.06-4.84,13.02-4.84,20.88s1.62,14.92,4.84,21.16c3.32,6.16,7.78,10.99,13.39,14.48,5.69,3.42,11.97,5.11,18.8,5.11,5.97,0,11.3-1.23,15.96-3.7,4.74-2.57,8.5-5.67,11.25-9.37v13.07c0,7.57-2.03,13.35-6.13,17.33-3.99,3.98-9.27,5.96-15.81,5.96-5.61,0-10.45-1.28-14.52-3.83-3.99-2.46-6.59-5.72-7.83-9.81h-16.09c.95,8.53,4.94,15.25,11.97,20.18,7.03,5.03,15.86,7.52,26.5,7.52,7.98,0,14.81-1.62,20.52-4.83,5.79-3.21,10.22-7.68,13.26-13.35,3.04-5.6,4.56-11.99,4.56-19.18V31.07h-16.38v11.37c-2.65-3.59-6.36-6.57-11.12-8.96l-.05.05ZM234.8,56.13c2.29,3.98,3.42,8.68,3.42,14.07s-1.13,10.14-3.42,14.2c-2.19,3.98-5.07,7.01-8.7,9.09-3.61,2.08-7.49,3.13-11.69,3.13s-7.98-1.05-11.69-3.13c-3.6-2.18-6.57-5.32-8.83-9.37-2.19-4.08-3.27-8.81-3.27-14.2s1.08-10.04,3.27-13.92c2.29-3.98,5.23-6.96,8.83-8.96,3.6-2.08,7.49-3.13,11.69-3.13s8.08,1.05,11.69,3.13c3.6,2.08,6.51,5.11,8.7,9.09ZM332.08,33.69c-4.84-2.57-10.35-3.83-16.53-3.83-4.66,0-9.06.9-13.26,2.7-4.09,1.8-7.47,4.31-10.12,7.52v-8.96h-16.25v78.29h16.25v-43.75c0-7.01,1.75-12.35,5.28-16.05,3.61-3.8,8.45-5.67,14.52-5.67s10.87,1.9,14.39,5.67c3.5,3.7,5.28,9.04,5.28,16.05v43.75h16.09v-46.17c0-7.11-1.37-13.17-4.12-18.18-2.76-5.03-6.59-8.81-11.54-11.37ZM369.34,17.77c1.98,1.98,4.45,2.98,7.42,2.98s5.28-1,7.26-2.98c1.98-1.98,2.99-4.44,2.99-7.39s-1-5.39-2.99-7.39c-1.98-1.98-4.43-2.98-7.26-2.98s-5.41,1-7.42,2.98c-1.98,1.98-2.99,4.44-2.99,7.39s1,5.39,2.99,7.39ZM384.71,109.41V31.12h-16.25v78.29h16.25Z"/>
         </svg>
       </a>
-      <p class="footer-meta">Sogni Article · Creative Assistant · Studio / Pro · <a href="https://www.sogni.ai/" target="_blank" rel="noreferrer">sogni.ai</a></p>
+      <p class="footer-meta">Sogni Article · Creative Assistant · <a href="https://www.sogni.ai/" target="_blank" rel="noreferrer">sogni.ai</a></p>
       <p class="footer-copy">© 2026 Sogni. All rights reserved.</p>
     </footer>
   </div>
@@ -1950,6 +2120,79 @@
         }, 1800);
       });
     });
+
+    const finalVideo = document.querySelector("[data-final-video]");
+
+    if (finalVideo) {
+      let userTookControl = false;
+      let autoplayPrepared = false;
+      let videoObserver = null;
+
+      const stopAutoManagement = () => {
+        userTookControl = true;
+        if (videoObserver) {
+          videoObserver.disconnect();
+          videoObserver = null;
+        }
+      };
+
+      const tryAutoplay = () => {
+        if (userTookControl) return;
+
+        if (!autoplayPrepared) {
+          finalVideo.defaultMuted = true;
+          finalVideo.muted = true;
+          finalVideo.playsInline = true;
+          autoplayPrepared = true;
+        }
+
+        if (!finalVideo.paused) return;
+
+        const playAttempt = finalVideo.play();
+        if (playAttempt && typeof playAttempt.catch === "function") {
+          playAttempt.catch(() => {});
+        }
+      };
+
+      const handleVisibilityChange = () => {
+        if (document.visibilityState === "visible") {
+          tryAutoplay();
+        }
+      };
+
+      if (document.readyState === "complete") {
+        tryAutoplay();
+      } else {
+        window.addEventListener("load", tryAutoplay, { once: true });
+      }
+
+      finalVideo.addEventListener("loadeddata", tryAutoplay);
+      finalVideo.addEventListener("canplay", tryAutoplay);
+      document.addEventListener("visibilitychange", handleVisibilityChange);
+
+      ["pointerdown", "touchstart", "keydown"].forEach((eventName) => {
+        finalVideo.addEventListener(eventName, stopAutoManagement, { once: true });
+      });
+
+      finalVideo.addEventListener("volumechange", () => {
+        if (!autoplayPrepared) return;
+        if (!finalVideo.muted || finalVideo.volume !== 1) {
+          stopAutoManagement();
+        }
+      });
+
+      if ("IntersectionObserver" in window) {
+        videoObserver = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              tryAutoplay();
+            }
+          });
+        }, { threshold: 0.35 });
+
+        videoObserver.observe(finalVideo);
+      }
+    }
   </script>
 </body>
 </html>
