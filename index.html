@@ -3,46 +3,47 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sogni HOW TO | Clear Workflows For Creators</title>
-  <meta name="description" content="Daily how-to guides for creators using Sogni. Direct workflows for prompting, enhancement, motion transfer, angles, and creator-first publishing.">
+  <title>Sogni Journal | Guides &amp; Newsletters</title>
+  <meta name="description" content="A brand-led Sogni editorial hub for workflow guides, product drops, and /Sync newsletter issues. Read the latest articles, browse the archive, and jump straight into Sogni.">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Sogni HOW TO | Clear Workflows For Creators">
-  <meta property="og:description" content="Daily how-to guides for creators using Sogni. Direct workflows for prompting, enhancement, motion transfer, angles, and creator-first publishing.">
-  <meta property="og:image" content="https://natalieart.github.io/sogni-architecture-article/sogni-site-hero.jpg">
+  <meta property="og:title" content="Sogni Journal | Guides &amp; Newsletters">
+  <meta property="og:description" content="Workflow guides, product drops, and /Sync newsletter issues in one Sogni editorial hub.">
+  <meta property="og:image" content="https://natalieart.github.io/sogni-architecture-article/assets/brand/sogni-creative-explosion.png">
   <meta property="og:url" content="https://natalieart.github.io/sogni-architecture-article/">
-  <meta property="og:site_name" content="Sogni HOW TO">
+  <meta property="og:site_name" content="Sogni Journal">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Sogni HOW TO | Clear Workflows For Creators">
-  <meta name="twitter:description" content="Daily how-to guides for creators using Sogni. Direct workflows for prompting, enhancement, motion transfer, angles, and creator-first publishing.">
-  <meta name="twitter:image" content="https://natalieart.github.io/sogni-architecture-article/sogni-site-hero.jpg">
+  <meta name="twitter:title" content="Sogni Journal | Guides &amp; Newsletters">
+  <meta name="twitter:description" content="Workflow guides, product drops, and /Sync newsletter issues in one Sogni editorial hub.">
+  <meta name="twitter:image" content="https://natalieart.github.io/sogni-architecture-article/assets/brand/sogni-creative-explosion.png">
   <link rel="icon" type="image/png" href="favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;family=Space+Mono:wght@400;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,700,900&amp;display=swap">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&amp;display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg: #050704;
-      --bg-deep: #030502;
-      --panel: rgba(12, 16, 10, 0.9);
-      --panel-soft: rgba(255, 255, 255, 0.03);
+      --bg: #070809;
+      --bg-deep: #020203;
+      --surface: rgba(12, 12, 13, 0.9);
+      --surface-strong: rgba(23, 23, 26, 0.88);
+      --surface-soft: rgba(255, 255, 255, 0.04);
       --line: rgba(255, 255, 255, 0.08);
-      --line-strong: rgba(0, 255, 157, 0.24);
-      --text: #f5f8f3;
-      --muted: #9fa99b;
-      --muted-strong: #d9e1d5;
-      --accent: #00ff9d;
-      --accent-soft: rgba(0, 255, 157, 0.08);
-      --accent-glow: rgba(0, 255, 157, 0.18);
-      --cyan: #7fd6ff;
-      --rose: #ff88d8;
-      --gold: #ffd07a;
+      --line-strong: rgba(153, 255, 1, 0.32);
+      --text: #fcfcfd;
+      --muted: #b1b1b7;
+      --muted-strong: #dddddf;
+      --lime: #99ff01;
+      --indigo: #4d40fe;
+      --magenta: #ff00cf;
+      --cyan: #00d3ff;
+      --white: #ffffff;
+      --shadow: 0 30px 90px rgba(0, 0, 0, 0.46);
       --radius-sm: 16px;
-      --radius-md: 24px;
-      --radius-lg: 34px;
-      --shadow: 0 28px 80px rgba(0, 0, 0, 0.42);
-      --font-main: "Inter", sans-serif;
+      --radius-md: 26px;
+      --radius-lg: 38px;
+      --font-main: "Satoshi", "Inter", sans-serif;
       --font-mono: "Space Mono", monospace;
-      --max: 1320px;
+      --max: 1380px;
     }
 
     * {
@@ -51,6 +52,7 @@
 
     html {
       scroll-behavior: smooth;
+      -webkit-text-size-adjust: 100%;
     }
 
     body {
@@ -59,23 +61,38 @@
       font-family: var(--font-main);
       color: var(--text);
       background:
-        radial-gradient(circle at top left, rgba(0, 255, 157, 0.14), transparent 30%),
-        radial-gradient(circle at top right, rgba(127, 214, 255, 0.16), transparent 26%),
-        linear-gradient(180deg, #060806 0%, #050704 50%, #040503 100%);
+        radial-gradient(circle at top left, rgba(153, 255, 1, 0.12), transparent 28%),
+        radial-gradient(circle at top right, rgba(0, 211, 255, 0.12), transparent 30%),
+        linear-gradient(180deg, #0a0a0d 0%, #050507 52%, #020203 100%);
       overflow-x: hidden;
     }
 
-    body::before {
+    body::before,
+    body::after {
       content: "";
       position: fixed;
       inset: 0;
       pointer-events: none;
-      background-image:
-        linear-gradient(rgba(255, 255, 255, 0.022) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255, 255, 255, 0.022) 1px, transparent 1px);
-      background-size: 48px 48px;
-      mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.8), transparent 94%);
       z-index: 0;
+    }
+
+    body::before {
+      background:
+        linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+      background-size: 48px 48px;
+      mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.78), transparent 92%);
+    }
+
+    body::after {
+      background:
+        linear-gradient(180deg, rgba(3, 4, 4, 0.3), rgba(3, 4, 4, 0.82)),
+        url("assets/brand/sogni-neon-grid.png") center top / 1120px auto no-repeat;
+      opacity: 0.24;
+      filter: saturate(1.15) blur(3px);
+      mix-blend-mode: screen;
+      transform: scale(1.06);
+      transform-origin: top center;
     }
 
     a {
@@ -99,13 +116,12 @@
     .topbar {
       position: sticky;
       top: 0;
-      z-index: 20;
+      z-index: 30;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 16px;
-      padding: 18px 0;
-      margin-bottom: 20px;
+      gap: 18px;
+      padding: 18px 0 12px;
       backdrop-filter: blur(18px);
       -webkit-backdrop-filter: blur(18px);
     }
@@ -114,64 +130,69 @@
       display: inline-flex;
       align-items: center;
       gap: 14px;
-      color: var(--text);
+      min-width: 0;
     }
 
-    .brand svg {
+    .brand-mark {
+      width: 42px;
+      height: 42px;
+      flex: none;
+      filter: drop-shadow(0 0 22px rgba(153, 255, 1, 0.22));
+    }
+
+    .brand-wordmark {
       width: 118px;
       height: auto;
-      display: block;
-      color: var(--accent);
+      flex: none;
     }
 
-    .brand-lockup {
+    .brand-copy {
       display: grid;
-      gap: 3px;
+      gap: 5px;
     }
 
-    .brand-kicker,
+    .brand-chip,
     .eyebrow,
     .section-label,
-    .card-tag,
-    .topic-chip,
+    .pill,
     .meta-chip {
       display: inline-flex;
       align-items: center;
-      gap: 10px;
+      gap: 9px;
       width: fit-content;
       font-family: var(--font-mono);
-      font-size: 0.74rem;
+      font-size: 0.72rem;
       letter-spacing: 0.08em;
       text-transform: uppercase;
     }
 
-    .brand-kicker,
+    .brand-chip,
     .eyebrow,
     .section-label {
       padding: 9px 14px;
       border-radius: 999px;
-      border: 1px solid var(--line-strong);
-      background: var(--accent-soft);
-      color: var(--accent);
+      border: 1px solid rgba(153, 255, 1, 0.24);
+      background: rgba(153, 255, 1, 0.08);
+      color: var(--lime);
     }
 
-    .brand-kicker::before,
+    .brand-chip::before,
     .eyebrow::before,
     .section-label::before {
       content: "";
       width: 8px;
       height: 8px;
       border-radius: 50%;
-      background: var(--accent);
-      box-shadow: 0 0 18px var(--accent-glow);
+      background: var(--lime);
+      box-shadow: 0 0 18px rgba(153, 255, 1, 0.3);
     }
 
     .brand-sub {
       color: var(--muted);
-      font-size: 0.78rem;
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
       letter-spacing: 0.08em;
       text-transform: uppercase;
-      font-family: var(--font-mono);
     }
 
     .topbar-nav {
@@ -189,147 +210,345 @@
       align-items: center;
       justify-content: center;
       gap: 10px;
+      min-height: 44px;
       padding: 12px 18px;
       border-radius: 999px;
-      font-size: 0.9rem;
+      font-size: 0.92rem;
+      font-weight: 700;
       transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
     }
 
     .nav-link {
-      color: var(--muted-strong);
-      background: rgba(255, 255, 255, 0.02);
       border: 1px solid transparent;
+      background: rgba(255, 255, 255, 0.025);
+      color: var(--muted-strong);
     }
 
     .button {
-      background: var(--accent);
-      color: #04120b;
-      font-weight: 800;
-      box-shadow: 0 14px 30px rgba(0, 255, 157, 0.16);
+      background: var(--lime);
+      color: #050703;
+      box-shadow: 0 16px 36px rgba(153, 255, 1, 0.22);
     }
 
     .button-ghost {
-      color: var(--text);
-      background: rgba(255, 255, 255, 0.03);
-      border: 1px solid var(--line-strong);
-      font-weight: 700;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      background: rgba(255, 255, 255, 0.045);
+      color: var(--white);
     }
 
     .nav-link:hover,
     .button:hover,
     .button-ghost:hover,
-    .feature-card:hover,
-    .task-card:hover,
-    .queue-card:hover,
-    .cta-panel:hover {
+    .story-card:hover,
+    .article-card:hover,
+    .issue-card:hover,
+    .product-card:hover,
+    .newsletter-panel:hover {
       transform: translateY(-1px);
+    }
+
+    .panel,
+    .story-card,
+    .article-card,
+    .issue-card,
+    .product-card,
+    .newsletter-panel,
+    .newsletter-visual,
+    .info-strip {
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      background:
+        linear-gradient(180deg, rgba(18, 18, 20, 0.88), rgba(7, 7, 8, 0.98)),
+        linear-gradient(135deg, rgba(153, 255, 1, 0.05), transparent 55%);
+      box-shadow: var(--shadow);
     }
 
     .hero {
       display: grid;
-      grid-template-columns: minmax(0, 1.08fr) minmax(320px, 0.92fr);
-      gap: 28px;
-      align-items: stretch;
-      margin-bottom: 34px;
+      grid-template-columns: 1fr;
+      gap: 0;
+      margin: 20px 0 36px;
     }
 
-    .panel,
-    .feature-card,
-    .task-card,
-    .queue-card,
-    .info-card,
-    .cta-panel {
-      border: 1px solid var(--line);
-      background: linear-gradient(180deg, rgba(16, 20, 12, 0.84), rgba(8, 10, 7, 0.98));
-      border-radius: var(--radius-lg);
-      box-shadow: var(--shadow);
+    .hero-stage {
+      position: relative;
+      overflow: hidden;
+      padding: 34px;
+      background:
+        linear-gradient(135deg, rgba(15, 15, 18, 0.96), rgba(6, 7, 9, 0.98)),
+        linear-gradient(135deg, rgba(153, 255, 1, 0.06), transparent 40%);
+      isolation: isolate;
+    }
+
+    .hero-stage::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(90deg, rgba(5, 6, 7, 0.96) 0%, rgba(5, 6, 7, 0.74) 42%, rgba(5, 6, 7, 0.28) 68%, rgba(5, 6, 7, 0.18) 100%),
+        url("assets/brand/sogni-neon-grid.png") right center / 720px auto no-repeat;
+      opacity: 0.9;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .hero-stage::after {
+      content: "";
+      position: absolute;
+      inset: auto -160px -180px auto;
+      width: 420px;
+      height: 420px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(255, 0, 207, 0.18), transparent 72%);
+      filter: blur(14px);
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .hero-stage-grid {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: minmax(280px, 0.78fr) minmax(0, 0.92fr) minmax(250px, 0.44fr);
+      gap: 24px;
+      align-items: stretch;
+    }
+
+    .hero-cover {
+      position: relative;
+      overflow: hidden;
+      min-height: 560px;
+      border-radius: 32px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      background: #050507;
+      box-shadow: 0 24px 80px rgba(0, 0, 0, 0.35);
+    }
+
+    .hero-cover img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transform: scale(1.01);
+    }
+
+    .hero-cover::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(180deg, rgba(5, 6, 7, 0.05) 0%, rgba(5, 6, 7, 0.18) 36%, rgba(5, 6, 7, 0.92) 100%),
+        radial-gradient(circle at top right, rgba(255, 0, 207, 0.18), transparent 36%);
+      pointer-events: none;
+    }
+
+    .hero-cover-copy {
+      position: absolute;
+      left: 18px;
+      right: 18px;
+      bottom: 18px;
+      z-index: 1;
+      padding: 20px;
+      display: grid;
+      gap: 10px;
+      border-radius: 24px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      background: rgba(8, 8, 10, 0.74);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+    }
+
+    .hero-cover-copy h2,
+    .rail-card h3 {
+      margin: 0;
+      line-height: 1.02;
+      letter-spacing: -0.05em;
+      text-wrap: balance;
+    }
+
+    .hero-cover-copy h2 {
+      font-size: clamp(1.76rem, 2.55vw, 2.7rem);
+    }
+
+    .hero-cover-copy p,
+    .rail-card p {
+      margin: 0;
+      color: var(--muted-strong);
+      line-height: 1.62;
     }
 
     .hero-copy {
       position: relative;
-      overflow: hidden;
-      padding: 34px;
-    }
-
-    .hero-copy::after {
-      content: "";
-      position: absolute;
-      top: -140px;
-      right: -140px;
-      width: 320px;
-      height: 320px;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(0, 255, 157, 0.16), transparent 70%);
-      pointer-events: none;
+      display: grid;
+      align-content: start;
+      gap: 14px;
+      padding: 8px 4px 0 2px;
     }
 
     .hero-copy h1 {
-      margin: 16px 0 18px;
-      max-width: 760px;
-      font-size: clamp(2.5rem, 5vw, 5rem);
-      line-height: 0.96;
-      letter-spacing: -0.07em;
+      margin: 6px 0 4px;
+      max-width: 10ch;
+      font-size: clamp(3rem, 5vw, 5.35rem);
+      line-height: 0.92;
+      letter-spacing: -0.08em;
       text-wrap: balance;
     }
 
     .hero-copy p {
-      max-width: 720px;
-      margin: 0 0 16px;
+      max-width: 520px;
+      margin: 0;
       color: var(--muted-strong);
-      font-size: clamp(1.02rem, 1.3vw, 1.18rem);
-      line-height: 1.7;
+      font-size: clamp(1rem, 1.06vw, 1.12rem);
+      line-height: 1.72;
     }
 
     .hero-actions {
       display: flex;
       flex-wrap: wrap;
       gap: 12px;
-      margin-top: 28px;
+      margin-top: 10px;
     }
 
     .hero-note {
-      margin-top: 18px;
+      max-width: 520px;
+      padding: 16px 18px;
+      border-left: 2px solid rgba(153, 255, 1, 0.5);
+      background: rgba(255, 255, 255, 0.03);
       color: var(--muted);
-      font-size: 0.92rem;
+      line-height: 1.66;
     }
 
     .hero-rail {
-      padding: 26px;
       display: grid;
-      gap: 18px;
+      gap: 16px;
       align-content: start;
-      background:
-        linear-gradient(180deg, rgba(12, 16, 10, 0.9), rgba(8, 10, 7, 0.98)),
-        radial-gradient(circle at top, rgba(127, 214, 255, 0.1), transparent 42%);
     }
 
-    .rail-title {
+    .rail-card {
+      padding: 22px;
+      border-radius: 28px;
+      border: 1px solid rgba(255, 255, 255, 0.09);
+      background:
+        linear-gradient(180deg, rgba(13, 15, 17, 0.9), rgba(8, 8, 10, 0.98)),
+        linear-gradient(135deg, rgba(77, 64, 254, 0.08), transparent 56%);
+      box-shadow: 0 20px 64px rgba(0, 0, 0, 0.28);
+      display: grid;
+      gap: 12px;
+      align-content: start;
+    }
+
+    .rail-card h3 {
+      font-size: 1.46rem;
+    }
+
+    .rail-sync {
+      min-height: 220px;
+      background:
+        linear-gradient(180deg, rgba(10, 14, 17, 0.92), rgba(8, 8, 10, 0.98)),
+        linear-gradient(135deg, rgba(0, 211, 255, 0.11), transparent 60%);
+    }
+
+    .rail-explore {
+      min-height: 180px;
+      background:
+        linear-gradient(180deg, rgba(16, 12, 18, 0.92), rgba(8, 8, 10, 0.98)),
+        linear-gradient(135deg, rgba(255, 0, 207, 0.11), transparent 60%);
+    }
+
+    .hero-meta {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 26px;
+      padding-top: 22px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .hero-kicker {
+      min-width: 0;
+      display: grid;
+      gap: 6px;
+      padding-right: 18px;
+    }
+
+    .hero-kicker:not(:last-child) {
+      border-right: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .hero-kicker strong {
+      display: block;
+      font-size: 1rem;
+      letter-spacing: -0.03em;
+    }
+
+    .hero-kicker span {
+      color: var(--muted);
+      font-size: 0.9rem;
+      line-height: 1.56;
+    }
+
+    section {
+      margin-top: 34px;
+    }
+
+    .section-head {
+      display: grid;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+
+    .section-head h2 {
       margin: 0;
-      font-size: clamp(1.42rem, 2vw, 1.82rem);
-      line-height: 1.08;
-      letter-spacing: -0.04em;
+      font-size: clamp(1.82rem, 3vw, 2.9rem);
+      line-height: 0.98;
+      letter-spacing: -0.05em;
       text-wrap: balance;
     }
 
-    .rail-copy {
+    .section-head p {
       margin: 0;
+      max-width: 760px;
       color: var(--muted-strong);
-      line-height: 1.65;
+      line-height: 1.72;
+      font-size: 1rem;
     }
 
-    .topic-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 10px;
-    }
-
-    .topic-chip,
+    .pill,
     .meta-chip {
-      padding: 10px 12px;
-      border-radius: 14px;
+      padding: 8px 12px;
+      border-radius: 999px;
       border: 1px solid rgba(255, 255, 255, 0.08);
-      background: rgba(255, 255, 255, 0.03);
+      background: rgba(255, 255, 255, 0.04);
       color: var(--muted-strong);
+    }
+
+    .pill.lime,
+    .meta-chip.lime {
+      border-color: rgba(153, 255, 1, 0.22);
+      background: rgba(153, 255, 1, 0.1);
+      color: var(--lime);
+    }
+
+    .pill.cyan,
+    .meta-chip.cyan {
+      border-color: rgba(0, 211, 255, 0.22);
+      background: rgba(0, 211, 255, 0.1);
+      color: var(--cyan);
+    }
+
+    .pill.magenta,
+    .meta-chip.magenta {
+      border-color: rgba(255, 0, 207, 0.22);
+      background: rgba(255, 0, 207, 0.1);
+      color: var(--magenta);
+    }
+
+    .pill.indigo,
+    .meta-chip.indigo {
+      border-color: rgba(77, 64, 254, 0.24);
+      background: rgba(77, 64, 254, 0.1);
+      color: #b8b3ff;
     }
 
     .meta-row {
@@ -338,89 +557,54 @@
       gap: 8px;
     }
 
-    .meta-chip {
-      font-size: 0.68rem;
-    }
-
-    .meta-chip.featured {
-      color: var(--accent);
-      border-color: var(--line-strong);
-      background: rgba(0, 255, 157, 0.08);
-    }
-
-    section {
-      margin-top: 28px;
-    }
-
-    .section-head {
+    .story-card {
       display: grid;
-      gap: 12px;
-      margin-bottom: 18px;
-    }
-
-    .section-head h2 {
-      margin: 0;
-      font-size: clamp(1.7rem, 3vw, 2.5rem);
-      letter-spacing: -0.05em;
-      line-height: 1.04;
-      text-wrap: balance;
-    }
-
-    .section-head p {
-      margin: 0;
-      max-width: 760px;
-      color: var(--muted-strong);
-      line-height: 1.7;
-    }
-
-    .feature-card {
-      display: grid;
-      grid-template-columns: minmax(320px, 0.95fr) minmax(0, 1.05fr);
+      grid-template-columns: minmax(360px, 0.94fr) minmax(0, 1.06fr);
       overflow: hidden;
     }
 
-    .feature-visual {
-      position: relative;
+    .story-visual {
       min-height: 100%;
-      background: #020302;
+      background: #030304;
     }
 
-    .feature-visual img {
+    .story-visual img {
       width: 100%;
       height: 100%;
       object-fit: cover;
     }
 
-    .feature-body {
-      padding: 28px;
+    .story-body {
+      padding: 30px;
       display: grid;
-      gap: 18px;
       align-content: start;
+      gap: 16px;
     }
 
-    .feature-body h3,
-    .task-body h3,
-    .queue-body h3,
-    .info-card h3,
-    .cta-panel h3 {
+    .story-body h3,
+    .article-body h3,
+    .issue-body h3,
+    .product-card h3 {
       margin: 0;
-      font-size: clamp(1.28rem, 2vw, 1.82rem);
-      line-height: 1.08;
+      font-size: clamp(1.34rem, 2vw, 1.96rem);
+      line-height: 1.06;
       letter-spacing: -0.04em;
       text-wrap: balance;
     }
 
-    .feature-body p,
-    .task-body p,
-    .queue-body p,
-    .info-card p,
-    .cta-panel p {
+    .story-body p,
+    .article-body p,
+    .issue-body p,
+    .product-card p,
+    .newsletter-panel p,
+    .newsletter-visual p,
+    .info-strip p {
       margin: 0;
       color: var(--muted-strong);
       line-height: 1.68;
     }
 
-    .feature-list {
+    .story-list {
       margin: 0;
       padding-left: 18px;
       color: var(--muted-strong);
@@ -428,120 +612,220 @@
       gap: 8px;
     }
 
-    .feature-footer {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 6px;
-    }
-
-    .task-grid,
-    .queue-grid,
-    .info-grid {
+    .article-grid {
       display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 18px;
     }
 
-    .task-grid,
-    .queue-grid {
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-    }
-
-    .info-grid {
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
-
-    .task-card,
-    .queue-card {
+    .article-card {
       overflow: hidden;
       display: grid;
       align-content: start;
       background:
-        linear-gradient(180deg, rgba(14, 18, 11, 0.88), rgba(8, 10, 7, 0.98)),
-        linear-gradient(135deg, rgba(0, 255, 157, 0.04), transparent 55%);
+        linear-gradient(180deg, rgba(14, 15, 18, 0.92), rgba(8, 8, 10, 0.98)),
+        linear-gradient(135deg, rgba(255, 0, 207, 0.05), transparent 52%);
     }
 
-    .task-visual {
+    .article-visual {
       aspect-ratio: 4 / 3;
       overflow: hidden;
       border-bottom: 1px solid var(--line);
-      background: #020302;
+      background: #030304;
     }
 
-    .task-visual img {
+    .article-visual img {
       width: 100%;
       height: 100%;
       object-fit: cover;
     }
 
-    .task-body,
-    .queue-body {
-      padding: 18px;
+    .article-body,
+    .issue-body {
+      padding: 20px;
       display: grid;
+      gap: 12px;
+      align-content: start;
+    }
+
+    .newsletter-shell {
+      display: grid;
+      grid-template-columns: minmax(0, 1.04fr) minmax(320px, 0.96fr);
+      gap: 18px;
+      align-items: stretch;
+      margin-bottom: 18px;
+    }
+
+    .newsletter-panel,
+    .newsletter-visual {
+      overflow: hidden;
+      position: relative;
+    }
+
+    .newsletter-panel {
+      padding: 30px;
+      display: grid;
+      gap: 18px;
+      align-content: start;
+    }
+
+    .subscribe-box {
+      display: grid;
+      gap: 12px;
+      padding: 18px;
+      border-radius: 24px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      background: rgba(255, 255, 255, 0.035);
+    }
+
+    .subscribe-copy {
+      color: var(--muted-strong);
+      font-size: 1rem;
+      line-height: 1.68;
+    }
+
+    .newsletter-actions {
+      display: flex;
+      flex-wrap: wrap;
       gap: 12px;
     }
 
-    .card-tag {
-      color: var(--accent);
-      font-size: 0.68rem;
+    .newsletter-topics {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 10px;
     }
 
-    .card-tag.cyan {
-      color: var(--cyan);
+    .topic-tile {
+      padding: 14px 16px;
+      border-radius: 18px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      background: rgba(255, 255, 255, 0.03);
     }
 
-    .card-tag.rose {
-      color: var(--rose);
+    .topic-tile strong {
+      display: block;
+      margin-bottom: 5px;
+      font-size: 0.98rem;
+      letter-spacing: -0.02em;
     }
 
-    .card-tag.gold {
-      color: var(--gold);
+    .topic-tile span {
+      color: var(--muted);
+      font-size: 0.88rem;
+      line-height: 1.5;
     }
 
-    .queue-card {
+    .newsletter-visual {
       min-height: 100%;
+      display: flex;
+      align-items: stretch;
+      background:
+        linear-gradient(180deg, rgba(4, 5, 7, 0.22), rgba(4, 5, 7, 0.82)),
+        #050507;
     }
 
-    .queue-card .meta-chip {
-      background: rgba(255, 255, 255, 0.02);
+    .newsletter-visual img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.78;
+      mix-blend-mode: screen;
     }
 
-    .queue-card .meta-chip.soon {
-      color: var(--gold);
-      border-color: rgba(255, 208, 122, 0.28);
-      background: rgba(255, 208, 122, 0.1);
+    .newsletter-visual::after {
+      content: "";
+      position: absolute;
+      inset: auto auto -120px -120px;
+      width: 320px;
+      height: 320px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(153, 255, 1, 0.24), transparent 72%);
+      filter: blur(8px);
+      pointer-events: none;
     }
 
-    .info-card,
-    .cta-panel {
+    .newsletter-visual-copy {
+      position: relative;
+      z-index: 1;
+      margin-top: auto;
+      width: 100%;
+      padding: 28px;
+      display: grid;
+      gap: 14px;
+      background: linear-gradient(180deg, rgba(4, 5, 7, 0.1), rgba(4, 5, 7, 0.88));
+    }
+
+    .newsletter-visual-copy h3 {
+      margin: 0;
+      font-size: clamp(1.36rem, 2vw, 2rem);
+      line-height: 1.02;
+      letter-spacing: -0.04em;
+      text-wrap: balance;
+    }
+
+    .issue-grid,
+    .product-grid {
+      display: grid;
+      gap: 18px;
+    }
+
+    .issue-grid {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .issue-card {
+      overflow: hidden;
+      display: grid;
+      align-content: start;
+      background:
+        linear-gradient(180deg, rgba(14, 16, 19, 0.94), rgba(7, 7, 9, 0.98)),
+        linear-gradient(135deg, rgba(77, 64, 254, 0.08), transparent 56%);
+    }
+
+    .issue-body a {
+      color: var(--white);
+      text-decoration: underline;
+      text-decoration-color: rgba(255, 255, 255, 0.25);
+      text-underline-offset: 3px;
+    }
+
+    .product-grid {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .product-card {
       padding: 24px;
       display: grid;
       gap: 14px;
       align-content: start;
     }
 
-    .cta-panel {
-      position: relative;
-      overflow: hidden;
-      margin-top: 32px;
+    .product-card .button-ghost {
+      justify-self: start;
+      margin-top: 4px;
     }
 
-    .cta-panel::after {
-      content: "";
-      position: absolute;
-      inset: auto -80px -120px auto;
-      width: 260px;
-      height: 260px;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(127, 214, 255, 0.12), transparent 72%);
-      pointer-events: none;
-    }
-
-    .cta-actions {
+    .info-strip {
+      margin-top: 34px;
+      padding: 22px 24px;
       display: flex;
       flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 8px;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      background:
+        linear-gradient(180deg, rgba(13, 15, 16, 0.88), rgba(7, 8, 9, 0.98)),
+        linear-gradient(135deg, rgba(0, 211, 255, 0.08), transparent 50%);
+    }
+
+    .info-strip strong {
+      display: block;
+      margin-bottom: 6px;
+      font-size: 1rem;
+      letter-spacing: -0.02em;
     }
 
     .site-footer {
@@ -564,24 +848,127 @@
       color: var(--muted-strong);
     }
 
-    .footer-brand svg {
-      width: 92px;
-      color: var(--accent);
+    .footer-brand img:first-child {
+      width: 30px;
+      height: 30px;
     }
 
-    @media (max-width: 1120px) {
-      .hero,
-      .feature-card {
+    .footer-brand img:last-child {
+      width: 92px;
+      height: auto;
+    }
+
+    .reader-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 90;
+      display: grid;
+      place-items: center;
+      padding: 22px;
+      background:
+        linear-gradient(180deg, rgba(3, 4, 4, 0.72), rgba(3, 4, 4, 0.88)),
+        radial-gradient(circle at top, rgba(153, 255, 1, 0.12), transparent 40%);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+    }
+
+    .reader-overlay[hidden] {
+      display: none;
+    }
+
+    .reader-dialog {
+      width: min(1240px, 100%);
+      height: min(90vh, 980px);
+      display: grid;
+      grid-template-rows: auto 1fr;
+      overflow: hidden;
+      border: 1px solid rgba(153, 255, 1, 0.18);
+      border-radius: 32px;
+      background:
+        linear-gradient(180deg, rgba(19, 21, 20, 0.96), rgba(8, 9, 10, 0.98));
+      box-shadow: 0 36px 120px rgba(0, 0, 0, 0.5);
+    }
+
+    .reader-toolbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      padding: 18px 20px;
+      border-bottom: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.03);
+    }
+
+    .reader-meta {
+      min-width: 0;
+      display: grid;
+      gap: 7px;
+    }
+
+    .reader-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      color: var(--text);
+    }
+
+    .reader-url {
+      color: var(--muted);
+      font-size: 0.83rem;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .reader-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .reader-frame {
+      width: 100%;
+      height: 100%;
+      border: 0;
+      background: #ffffff;
+    }
+
+    @media (max-width: 1160px) {
+      .hero-stage-grid,
+      .story-card,
+      .newsletter-shell {
         grid-template-columns: 1fr;
       }
 
-      .task-grid,
-      .queue-grid {
+      .article-grid,
+      .issue-grid,
+      .product-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
 
-      .info-grid {
+      .newsletter-topics,
+      .hero-meta {
         grid-template-columns: 1fr;
+      }
+
+      .hero-cover {
+        min-height: 440px;
+      }
+
+      .hero-kicker {
+        padding-right: 0;
+        padding-bottom: 14px;
+      }
+
+      .hero-kicker:not(:last-child) {
+        border-right: 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      }
+
+      .reader-dialog {
+        height: min(92vh, 1000px);
       }
     }
 
@@ -598,47 +985,110 @@
       }
 
       .topbar-nav {
+        width: 100%;
         justify-content: flex-start;
+        row-gap: 8px;
+      }
+
+      .topbar-nav > * {
+        flex: 0 0 auto;
       }
 
       .nav-link,
       .button,
       .button-ghost {
+        min-height: 42px;
         padding: 11px 16px;
-        font-size: 0.84rem;
+        font-size: 0.86rem;
       }
 
-      .hero-copy,
-      .hero-rail,
-      .feature-body,
-      .info-card,
-      .cta-panel {
+      .nav-link {
+        width: auto;
+      }
+
+      .nav-cta,
+      .nav-primary {
+        width: 100%;
+        min-height: 46px;
+        flex: 1 1 100%;
+      }
+
+      .hero-stage,
+      .story-body,
+      .newsletter-panel,
+      .newsletter-visual-copy,
+      .product-card,
+      .info-strip {
         padding: 20px;
-        border-radius: 20px;
+        border-radius: 24px;
       }
 
-      .feature-card,
-      .task-card,
-      .queue-card {
-        border-radius: 20px;
+      .story-card,
+      .article-card,
+      .issue-card,
+      .newsletter-panel,
+      .newsletter-visual,
+      .product-card {
+        border-radius: 24px;
+      }
+
+      .brand-wordmark {
+        width: 104px;
       }
 
       .hero-copy h1 {
-        font-size: clamp(2rem, 10vw, 3.2rem);
+        font-size: clamp(2.5rem, 11vw, 4.1rem);
+      }
+
+      .hero-copy {
+        padding: 0;
       }
 
       .section-head h2 {
-        font-size: clamp(1.5rem, 7vw, 2.2rem);
+        font-size: clamp(1.58rem, 7vw, 2.3rem);
       }
 
-      .topic-grid,
-      .task-grid,
-      .queue-grid {
+      .article-grid,
+      .issue-grid,
+      .product-grid,
+      .newsletter-topics {
         grid-template-columns: 1fr;
       }
 
-      .feature-visual {
+      .hero-cover {
+        min-height: 340px;
+      }
+
+      .story-visual,
+      .article-visual {
         aspect-ratio: 16 / 10;
+      }
+
+      .newsletter-actions {
+        flex-direction: column;
+      }
+
+      .reader-overlay {
+        padding: 12px;
+      }
+
+      .reader-dialog {
+        height: 92vh;
+        border-radius: 24px;
+      }
+
+      .reader-toolbar {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 16px;
+      }
+
+      .reader-actions {
+        width: 100%;
+      }
+
+      .reader-actions > * {
+        flex: 1 1 100%;
       }
     }
 
@@ -647,26 +1097,50 @@
         padding: 0 10px 56px;
       }
 
-      .hero-copy,
-      .hero-rail,
-      .feature-body,
-      .info-card,
-      .cta-panel,
-      .task-body,
-      .queue-body {
+      .hero-stage,
+      .story-body,
+      .article-body,
+      .issue-body,
+      .newsletter-panel,
+      .newsletter-visual-copy,
+      .product-card,
+      .info-strip {
         padding: 16px;
       }
 
-      .brand svg,
-      .footer-brand svg {
-        width: 84px;
+      .brand-mark {
+        width: 34px;
+        height: 34px;
       }
 
+      .brand-wordmark {
+        width: 92px;
+      }
+
+      .brand-chip,
       .eyebrow,
-      .section-label,
-      .brand-kicker {
+      .section-label {
         padding: 7px 12px;
         font-size: 0.68rem;
+      }
+
+      .hero-cover-copy,
+      .hero-note,
+      .rail-card {
+        padding: 16px;
+      }
+
+      .reader-overlay {
+        padding: 8px;
+      }
+
+      .reader-dialog {
+        height: 94vh;
+        border-radius: 20px;
+      }
+
+      .reader-toolbar {
+        padding: 14px;
       }
     }
   </style>
@@ -674,362 +1148,423 @@
 <body>
   <div class="shell">
     <header class="topbar">
-      <a class="brand" href="https://www.sogni.ai/" target="_blank" rel="noreferrer">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 387 160" aria-hidden="true">
-          <path fill="currentColor" d="M17.2,106.99c5.33,2.29,11.3,3.41,17.95,3.41,7.03,0,13.11-1.33,18.23-3.98,5.23-2.75,9.17-6.34,11.82-10.81,2.76-4.44,4.12-9.19,4.12-14.2,0-6.24-1.47-11.22-4.43-14.92-2.86-3.8-6.36-6.57-10.53-8.37-4.09-1.8-9.4-3.59-15.96-5.39-4.94-1.34-8.83-2.57-11.69-3.7-2.86-1.13-5.23-2.64-7.13-4.54-1.8-1.98-2.7-4.49-2.7-7.52,0-4.44,1.47-7.86,4.4-10.22,2.94-2.36,6.75-3.54,11.41-3.54,5.12,0,9.27,1.28,12.39,3.83,3.14,2.57,4.84,5.62,5.12,9.24h17.95c-.67-8.34-4.09-14.87-10.25-19.62-6.08-4.83-13.9-7.24-23.51-7.24-6.75,0-12.67,1.13-17.82,3.41-5.12,2.29-9.11,5.55-11.97,9.81C1.73,26.91.31,31.89.31,37.56c0,6.16,1.42,11.09,4.27,14.76,2.86,3.7,6.28,6.44,10.25,8.24,4.09,1.69,9.35,3.42,15.81,5.11,5.12,1.34,9.11,2.57,11.97,3.7,2.94,1.13,5.36,2.75,7.26,4.83,1.98,2.08,2.99,4.78,2.99,8.09,0,4.26-1.57,7.75-4.71,10.5-3.14,2.64-7.49,3.98-13.11,3.98s-9.63-1.36-12.67-4.11c-2.94-2.75-4.61-6.24-5-10.5H0c0,5.67,1.52,10.66,4.56,14.92,3.04,4.26,7.21,7.57,12.54,9.94l.1-.03ZM102.48,105.71c5.97,3.31,12.67,4.98,20.08,4.98s14.34-1.67,20.52-4.98c6.28-3.42,11.2-8.19,14.83-14.35,3.6-6.16,5.41-13.22,5.41-21.16s-1.75-15.02-5.28-21.16c-3.53-6.14-8.32-10.89-14.39-14.2-6.08-3.31-12.87-4.98-20.37-4.98s-14.29,1.67-20.37,4.98c-6.08,3.31-10.87,8.06-14.39,14.2-3.53,6.16-5.28,13.22-5.28,21.16s1.7,15.15,5.12,21.31c3.42,6.06,8.11,10.81,14.11,14.2ZM134.25,93.64c-3.61,1.98-7.49,2.98-11.69,2.98-6.54,0-12.03-2.29-16.38-6.83-4.27-4.65-6.41-11.17-6.41-19.62,0-5.67,1.06-10.48,3.14-14.35,2.08-3.98,4.89-6.96,8.39-8.96,3.61-1.98,7.49-2.98,11.69-2.98s8.08,1,11.69,2.98c3.6,1.98,6.51,4.98,8.7,8.96,2.19,3.88,3.27,8.68,3.27,14.35s-1.13,10.5-3.42,14.48c-2.29,3.98-5.28,6.96-8.99,8.96v.03ZM227.1,33.53c-4.66-2.46-10.02-3.7-16.09-3.7-6.85,0-13.11,1.69-18.8,5.11-5.61,3.31-10.07,8.01-13.39,14.07-3.22,6.06-4.84,13.02-4.84,20.88s1.62,14.92,4.84,21.16c3.32,6.16,7.78,10.99,13.39,14.48,5.69,3.42,11.97,5.11,18.8,5.11,5.97,0,11.3-1.23,15.96-3.7,4.74-2.57,8.5-5.67,11.25-9.37v13.07c0,7.57-2.03,13.35-6.13,17.33-3.99,3.98-9.27,5.96-15.81,5.96-5.61,0-10.45-1.28-14.52-3.83-3.99-2.46-6.59-5.72-7.83-9.81h-16.09c.95,8.53,4.94,15.25,11.97,20.18,7.03,5.03,15.86,7.52,26.5,7.52,7.98,0,14.81-1.62,20.52-4.83,5.79-3.21,10.22-7.68,13.26-13.35,3.04-5.6,4.56-11.99,4.56-19.18V31.07h-16.38v11.37c-2.65-3.59-6.36-6.57-11.12-8.96l-.05.05ZM234.8,56.13c2.29,3.98,3.42,8.68,3.42,14.07s-1.13,10.14-3.42,14.2c-2.19,3.98-5.07,7.01-8.7,9.09-3.61,2.08-7.49,3.13-11.69,3.13s-7.98-1.05-11.69-3.13c-3.6-2.18-6.57-5.32-8.83-9.37-2.19-4.08-3.27-8.81-3.27-14.2s1.08-10.04,3.27-13.92c2.29-3.98,5.23-6.96,8.83-8.96,3.6-2.08,7.49-3.13,11.69-3.13s8.08,1.05,11.69,3.13c3.6,2.08,6.51,5.11,8.7,9.09ZM332.08,33.69c-4.84-2.57-10.35-3.83-16.53-3.83-4.66,0-9.06.9-13.26,2.7-4.09,1.8-7.47,4.31-10.12,7.52v-8.96h-16.25v78.29h16.25v-43.75c0-7.01,1.75-12.35,5.28-16.05,3.61-3.8,8.45-5.67,14.52-5.67s10.87,1.9,14.39,5.67c3.5,3.7,5.28,9.04,5.28,16.05v43.75h16.09v-46.17c0-7.11-1.37-13.17-4.12-18.18-2.76-5.03-6.59-8.81-11.54-11.37ZM369.34,17.77c1.98,1.98,4.45,2.98,7.42,2.98s5.28-1,7.26-2.98c1.98-1.98,2.99-4.44,2.99-7.39s-1-5.39-2.99-7.39c-1.98-1.98-4.43-2.98-7.26-2.98s-5.41,1-7.42,2.98c-1.98,1.98-2.99,4.44-2.99,7.39s1,5.39,2.99,7.39ZM384.71,109.41V31.12h-16.25v78.29h16.25Z"/>
-        </svg>
-        <span class="brand-lockup">
-          <span class="brand-kicker">Sogni How To</span>
-          <span class="brand-sub">Daily creator workflows</span>
+      <a class="brand" href="https://www.sogni.ai/" target="_blank" rel="noreferrer" aria-label="Sogni">
+        <img class="brand-mark" src="assets/brand/sogni-moon.svg" alt="">
+        <img class="brand-wordmark" src="assets/brand/sogni-wordmark-white.png" alt="Sogni">
+        <span class="brand-copy">
+          <span class="brand-chip">Journal</span>
+          <span class="brand-sub">Guides / /Sync / Releases</span>
         </span>
       </a>
 
       <nav class="topbar-nav" aria-label="Primary">
-        <a class="nav-link" href="#featured">Featured</a>
-        <a class="nav-link" href="#tasks">By Task</a>
-        <a class="nav-link" href="#queue">Next Up</a>
-        <a class="button-ghost" href="https://www.sogni.ai/" target="_blank" rel="noreferrer">Visit Sogni.ai</a>
-        <a class="button" href="https://app.sogni.ai/create" target="_blank" rel="noreferrer">Open Sogni Create</a>
+        <a class="nav-link" href="#latest">Latest</a>
+        <a class="nav-link" href="#articles">Articles</a>
+        <a class="nav-link" href="#newsletters">Newsletters</a>
+        <a class="nav-link" href="#explore">Explore</a>
+        <a class="button-ghost nav-cta" href="https://www.sogni.ai/" target="_blank" rel="noreferrer">Visit Sogni.ai</a>
+        <a class="button nav-primary" href="https://app.sogni.ai/create" target="_blank" rel="noreferrer">Open Sogni Create</a>
       </nav>
     </header>
 
     <section class="hero">
-      <div class="panel hero-copy">
-        <span class="eyebrow">Sogni HOW TO</span>
-        <h1>Clear workflows for creators who want answers that make sense.</h1>
-        <p>
-          You already have ideas. This is where you get the steps. Prompting. Enhancement. Motion transfer.
-          Different angles. Publishing visuals that look finished. Every guide is written to be scanned fast and used the same day.
-        </p>
-        <p>
-          Start simple or dive deep. You choose your depth.
-        </p>
-        <div class="hero-actions">
-          <a class="button" href="#featured">Read the featured guides</a>
-          <a class="button-ghost" href="guides/creative-assistant-studio-pro/">Open the Creative Assistant guide</a>
-        </div>
-        <div class="hero-note">Real screens. Real settings. No filler.</div>
-      </div>
+      <div class="panel hero-stage">
+        <div class="hero-stage-grid">
+          <a class="hero-cover" href="guides/creative-assistant-studio-pro/">
+            <img src="assets/article-creative-assistant/5-edit-complete.png" alt="Creative Assistant result screen showing a finished image edit and suggested next actions in Sogni Studio.">
+            <div class="hero-cover-copy">
+              <span class="pill lime">Cover story</span>
+              <h2>Creative Assistant takes the front page.</h2>
+              <p>Plain-language edits, visual analysis, and fast handoff into video in one tighter lead story.</p>
+            </div>
+          </a>
 
-      <aside class="panel hero-rail">
-        <span class="section-label">What Lives Here</span>
-        <h2 class="rail-title">Daily how-tos built around the work you actually want to make.</h2>
-        <p class="rail-copy">
-          This homepage is built as a repeatable editorial shell for Sogni guides. The architecture workflow is live,
-          the coffee transition guide shows how Starting and Ending Frames turn into polished motion, and the new
-          Creative Assistant guide shows how chat-first creation turns into finished outputs.
-        </p>
-        <div class="topic-grid">
-          <span class="topic-chip">Creative Assistant</span>
-          <span class="topic-chip">Edit by prompting</span>
-          <span class="topic-chip">Enhance options</span>
-          <span class="topic-chip">Start/end frames</span>
-          <span class="topic-chip">Different angles</span>
-          <span class="topic-chip">Clip mixing</span>
-          <span class="topic-chip">Marketing visuals</span>
-          <span class="topic-chip">From sketch to final</span>
+          <div class="hero-copy">
+            <span class="eyebrow">Sogni Editorial Hub</span>
+            <h1>One Sogni front page for guides, launches, and /Sync.</h1>
+            <p>
+              Editorial stories, workflow guides, and newsletter drops now live in one calmer, sharper index instead
+              of competing across disconnected surfaces.
+            </p>
+            <div class="hero-actions">
+              <a class="button" href="#articles">Browse articles</a>
+              <a class="button-ghost" href="#newsletters">Open /Sync</a>
+            </div>
+            <div class="hero-note">
+              Designed to feel closer to a cover page than a product dashboard: stronger hierarchy, more image-first rhythm,
+              and quicker paths from reading into Sogni Create, Studio Pro, 360, and docs.
+            </div>
+          </div>
+
+          <aside class="hero-rail">
+            <a class="rail-card rail-sync" href="https://news.sogni.ai/sogni-sync/19.html" rel="noreferrer">
+              <span class="pill cyan">/Sync</span>
+              <h3>Volume 19 is live.</h3>
+              <p>Season 6, motion transfer, sound-to-video, perspective shifts, Clip Mixer upgrades, and fresh model drops.</p>
+            </a>
+
+            <a class="rail-card rail-explore" href="#explore">
+              <span class="pill magenta">Explore</span>
+              <h3>Go from reading straight into the tools.</h3>
+              <p>Create, Studio Pro, 360, and docs stay one clean scroll away from the editorial layer.</p>
+            </a>
+          </aside>
         </div>
-        <div class="meta-row">
-          <span class="meta-chip featured">3 guides live</span>
-          <span class="meta-chip">8 task shortcuts ready</span>
-          <span class="meta-chip">Built for regular publishing</span>
+
+        <div class="hero-meta">
+          <div class="hero-kicker">
+            <strong>3 live guides</strong>
+            <span>Creative Assistant, architectural renders, and frame-led coffee transitions.</span>
+          </div>
+          <div class="hero-kicker">
+            <strong>19 public issues</strong>
+            <span>/Sync already has a real archive, so the newsletter section feels live from day one.</span>
+          </div>
+          <div class="hero-kicker">
+            <strong>Brand-led editorial</strong>
+            <span>Satoshi, Space Mono, neon palette, and Sogni visuals translated into a calmer magazine-style index.</span>
+          </div>
         </div>
-      </aside>
+      </div>
     </section>
 
-    <section id="featured">
+    <section id="latest">
       <div class="section-head">
-        <span class="section-label">Start Here</span>
-        <h2>The first full workflows are already live.</h2>
+        <span class="section-label">Latest Drop</span>
+        <h2>Lead with the newest workflow, then let the archive do the rest.</h2>
         <p>
-          Start with architecture if you want a full concept-to-presentation guide. Start with coffee if you want a tighter
-          workflow focused on Starting and Ending Frames, Clip Mixer, and Timeline control. Start with Creative Assistant if
-          you want to see how chat-first creation picks tools, resolves settings, and keeps suggesting the next move.
+          The homepage now behaves like an editorial front page instead of a generic landing page. One lead story sets the tone,
+          then the full article grid and newsletter archive sit right underneath it.
         </p>
       </div>
 
-      <a class="feature-card" href="guides/creative-assistant-studio-pro/">
-        <div class="feature-visual">
+      <a class="story-card" href="guides/creative-assistant-studio-pro/">
+        <div class="story-visual">
           <img src="assets/article-creative-assistant/5-edit-complete.png" alt="Creative Assistant result screen showing a finished image edit and suggested next actions in Sogni Studio.">
         </div>
-        <div class="feature-body">
-          <span class="card-tag">New guide</span>
-          <h3>Meet the New Creative Assistant in Sogni Studio / Pro</h3>
+        <div class="story-body">
+          <span class="pill lime">Lead Story</span>
+          <h3>Meet the New Creative Assistant.</h3>
           <p>
-            See how the new assistant works across Agent, Guided, and Manual modes. The guide follows a real editing flow:
-            attach media, get analysis, ask for the transformation in plain language, resolve one technical choice, animate
-            the result with a second prompt, preview the run live, and receive a finished video with smart next-step suggestions.
+            This is the clearest “what’s new in Sogni” story in the current article set, so it now anchors the hub.
+            It shows how Agent, Guided, and Manual modes shift the workflow without removing control from the creator.
           </p>
-          <ul class="feature-list">
-            <li>See how Agent, Guided, and Manual modes change the workflow without boxing you in</li>
-            <li>Let the assistant analyze media and suggest useful next actions before you type</li>
-            <li>Use natural language for both the image edit and the follow-up video prompt</li>
-            <li>Preview the live run, then keep momentum with output-ready suggestions after the clip finishes</li>
+          <ul class="story-list">
+            <li>Attach media and let the assistant analyze what is already in the frame.</li>
+            <li>Ask for image edits in plain language, then animate the result with a second prompt.</li>
+            <li>See the background activity live, then keep momentum with the assistant’s next-step suggestions.</li>
           </ul>
-          <div class="feature-footer">
-            <span class="meta-chip featured">7 steps</span>
-            <span class="meta-chip">Studio / Pro workflow</span>
-            <span class="meta-chip">Creative Assistant</span>
-          </div>
-        </div>
-      </a>
-
-      <a class="feature-card" href="guides/architectural-renders/">
-        <div class="feature-visual">
-          <img src="assets/banner-start.png" alt="Featured workflow banner showing an architectural sketch, a polished final house render, and alternate camera angles.">
-        </div>
-        <div class="feature-body">
-          <span class="card-tag">Featured guide</span>
-          <h3>Why You No Longer Need to Outsource Your Architectural Renders</h3>
-          <p>
-            Start with one sketch. Turn it into a polished still. Expand it into multiple angles. Then build motion when you need it.
-            The guide is direct and screen-led, so you can follow the workflow without guessing what comes next.
-          </p>
-          <ul class="feature-list">
-            <li>Prompt the image with structure and mood in mind</li>
-            <li>Enhance the best still without losing the core idea</li>
-            <li>Turn one good frame into a reusable angle set</li>
-            <li>Use transitions and reveal clips when the project needs motion</li>
-          </ul>
-          <div class="feature-footer">
-            <span class="meta-chip featured">10 steps</span>
-            <span class="meta-chip">Create + 360 workflow</span>
-            <span class="meta-chip">Architecture</span>
-          </div>
-        </div>
-      </a>
-
-      <a class="feature-card" href="guides/starting-ending-frames-coffee/">
-        <div class="feature-visual">
-          <img src="assets/article-coffee-frames/11-outdoor-final.png" alt="Featured workflow image showing a finished Sogni iced coffee product shot outdoors.">
-        </div>
-        <div class="feature-body">
-          <span class="card-tag">New guide</span>
-          <h3>How to Create Coffee Transitions With Starting and Ending Frames</h3>
-          <p>
-            Start with a clear beginning frame and ending frame, write the transition prompt, then stitch the sequence in Mixer.
-            The guide stays screen-led and practical, so you can go from product stills to polished motion without guessing the next step.
-          </p>
-          <ul class="feature-list">
-            <li>Use Starting and Ending Frames to control motion and final look</li>
-            <li>Chain short clips together instead of forcing one prompt to do everything</li>
-            <li>Stitch automatically in Sogni Mixer and refine in Timeline view</li>
-            <li>Turn the same workflow into tutorials, product visuals, and marketing shots</li>
-          </ul>
-          <div class="feature-footer">
-            <span class="meta-chip featured">6 steps</span>
-            <span class="meta-chip">Create + Mixer workflow</span>
-            <span class="meta-chip">Coffee / marketing</span>
+          <div class="meta-row">
+            <span class="meta-chip lime">7 steps</span>
+            <span class="meta-chip cyan">Agent / Guided / Manual</span>
+            <span class="meta-chip indigo">Studio workflow</span>
           </div>
         </div>
       </a>
     </section>
 
-    <section id="tasks">
+    <section id="articles">
       <div class="section-head">
-        <span class="section-label">Browse By Task</span>
-        <h2>Jump straight to the part you need.</h2>
+        <span class="section-label">Articles</span>
+        <h2>All live workflow guides.</h2>
         <p>
-          The live guides already cover assistant-led editing, prompting, enhancement, angles, start/end-frame transitions,
-          and clip stitching.
-          These shortcuts take you straight into the relevant part of the workflow.
+          These are the three articles currently live on the site. The structure is ready to expand as more tutorials,
+          creator breakdowns, launch notes, and campaign pages come in.
         </p>
       </div>
 
-      <div class="task-grid">
-        <a class="task-card" href="guides/creative-assistant-studio-pro/#step-1">
-          <div class="task-visual">
-            <img src="assets/article-creative-assistant/2-image-analysis.png" alt="Creative Assistant analyzing an attached image and offering suggested next actions.">
+      <div class="article-grid">
+        <a class="article-card" href="guides/creative-assistant-studio-pro/">
+          <div class="article-visual">
+            <img loading="lazy" src="assets/article-creative-assistant/5-edit-complete.png" alt="Finished Creative Assistant image edit with suggested next actions.">
           </div>
-          <div class="task-body">
-            <span class="card-tag">Assistant</span>
-            <h3>Attach media and let the assistant suggest what to do next.</h3>
-            <p>Good when you want the tool to read the image, understand the context, and turn it into actionable next steps fast.</p>
-          </div>
-        </a>
-
-        <a class="task-card" href="guides/creative-assistant-studio-pro/#step-4">
-          <div class="task-visual">
-            <img src="assets/article-creative-assistant/5-edit-complete.png" alt="Finished Creative Assistant image edit with follow-up actions like animate, upscale, and change angle.">
-          </div>
-          <div class="task-body">
-            <span class="card-tag cyan">Guided Editing</span>
-            <h3>Ask for an edit in plain language and keep moving from the finished output.</h3>
-            <p>Useful when you want the assistant to handle models, settings, and follow-up suggestions while you stay focused on the idea.</p>
+          <div class="article-body">
+            <span class="pill lime">Latest guide</span>
+            <h3>Creative Assistant</h3>
+            <p>Chat-first creation, smart media analysis, plain-language edits, and a clean handoff into video.</p>
+            <div class="meta-row">
+              <span class="meta-chip lime">Agent-led</span>
+              <span class="meta-chip">Image + video</span>
+            </div>
           </div>
         </a>
 
-        <a class="task-card" href="guides/architectural-renders/#step-4">
-          <div class="task-visual">
-            <img src="assets/article-x-houses/4.png" alt="Prompting interface inside Sogni Create.">
+        <a class="article-card" href="guides/architectural-renders/">
+          <div class="article-visual">
+            <img loading="lazy" src="assets/banner-start.png" alt="Architectural render banner showing concept, polished still, and alternate angles.">
           </div>
-          <div class="task-body">
-            <span class="card-tag">Prompting</span>
-            <h3>Write the prompt with structure, mood, and materials in mind.</h3>
-            <p>Use one direct brief that tells the model what to preserve and what to push.</p>
-          </div>
-        </a>
-
-        <a class="task-card" href="guides/architectural-renders/#step-5">
-          <div class="task-visual">
-            <img src="assets/blog/enhance-detail.png" alt="Close-up enhancement detail showing clean skin texture and high fidelity detail.">
-          </div>
-          <div class="task-body">
-            <span class="card-tag cyan">Enhancement</span>
-            <h3>Push the result further without overcooking it.</h3>
-            <p>Take the strongest frame and refine it with sharper detail, stronger materials, and cleaner finish.</p>
+          <div class="article-body">
+            <span class="pill cyan">Workflow guide</span>
+            <h3>Architectural Renders</h3>
+            <p>From one concept sketch to polished stills, multiple angles, optional transitions, and a presentation-ready reveal.</p>
+            <div class="meta-row">
+              <span class="meta-chip cyan">Create + 360</span>
+              <span class="meta-chip">Architecture</span>
+            </div>
           </div>
         </a>
 
-        <a class="task-card" href="guides/architectural-renders/#step-6">
-          <div class="task-visual">
-            <img src="assets/blog/different-angles.png" alt="High-angle fashion image showing a different camera angle by a pool.">
+        <a class="article-card" href="guides/starting-ending-frames-coffee/">
+          <div class="article-visual">
+            <img loading="lazy" src="assets/article-coffee-frames/11-outdoor-final.png" alt="Finished Sogni coffee product shot in an outdoor scene.">
           </div>
-          <div class="task-body">
-            <span class="card-tag rose">Angles</span>
-            <h3>Turn one still into multiple perspectives that still feel on-model.</h3>
-            <p>Use 360 by Sogni when one finished frame is enough to build a fuller visual story.</p>
-          </div>
-        </a>
-
-        <a class="task-card" href="guides/architectural-renders/#step-8">
-          <div class="task-visual">
-            <img src="assets/article-x-houses/13.png" alt="Transition generation setup inside Sogni 360.">
-          </div>
-          <div class="task-body">
-            <span class="card-tag gold">Motion</span>
-            <h3>Move from stills to transitions when the project needs momentum.</h3>
-            <p>Build motion only when it adds value. Keep it clean. Keep it controlled.</p>
-          </div>
-        </a>
-
-        <a class="task-card" href="guides/starting-ending-frames-coffee/#step-2">
-          <div class="task-visual">
-            <img src="assets/article-coffee-frames/create-start-end-ui.png" alt="Starting frame and ending frame setup inside Sogni Create.">
-          </div>
-          <div class="task-body">
-            <span class="card-tag">Start / End</span>
-            <h3>Define where the clip begins and ends before you chase polish.</h3>
-            <p>Use frame pairs when you want tighter control over motion, camera feel, and the final shot.</p>
-          </div>
-        </a>
-
-        <a class="task-card" href="guides/starting-ending-frames-coffee/#step-5">
-          <div class="task-visual">
-            <img src="assets/article-coffee-frames/clip-mixer-list.png" alt="Clip Mixer interface inside Sogni Studio.">
-          </div>
-          <div class="task-body">
-            <span class="card-tag gold">Mixer</span>
-            <h3>Stitch multiple transition clips fast, then fine-tune only where it matters.</h3>
-            <p>Good when the motion is already working and you need speed, order, and cleaner exports.</p>
+          <div class="article-body">
+            <span class="pill magenta">Motion guide</span>
+            <h3>Starting &amp; Ending Frames</h3>
+            <p>Turn controlled frame pairs into smooth transitions, then stitch the sequence in Mixer and refine it in Timeline.</p>
+            <div class="meta-row">
+              <span class="meta-chip magenta">Create + Mixer</span>
+              <span class="meta-chip">Product motion</span>
+            </div>
           </div>
         </a>
       </div>
     </section>
 
-    <section id="queue">
+    <section id="newsletters">
       <div class="section-head">
-        <span class="section-label">Next Up</span>
-        <h2>The next guides this homepage is ready to hold.</h2>
+        <span class="section-label">Newsletters</span>
+        <h2>Give /Sync its own shelf, not just a footer link.</h2>
         <p>
-          The layout is already set up for regular publishing. Drop in the next post, switch the status, and keep moving.
+          Sogni already has a live public newsletter archive at <a href="https://news.sogni.ai/" rel="noreferrer">news.sogni.ai</a>.
+          This section turns it into a first-class part of the index, so articles and newsletters can live side by side.
         </p>
       </div>
 
-      <div class="queue-grid">
-        <article class="queue-card">
-          <div class="queue-body">
-            <div class="meta-row">
-              <span class="meta-chip soon">Soon</span>
-              <span class="meta-chip">Model choice</span>
-            </div>
-            <h3>Know when to let the assistant pick the model and when to override it yourself.</h3>
-            <p>Good when the creator wants more confidence about automation, control, and the tradeoffs behind each route.</p>
-          </div>
-        </article>
+      <div class="newsletter-shell">
+        <div class="newsletter-panel">
+          <span class="pill lime">Stay in the loop with updates</span>
+          <h3>Use this space for new guide drops, product changes, launches, and editorial notes.</h3>
+          <p>
+            Right now the section points to the live /Sync archive. Later, this same layout can also hold embedded signup,
+            featured issues, curated editorial picks, or segmented newsletter streams for creators, workers, and developers.
+          </p>
 
-        <article class="queue-card">
-          <div class="queue-body">
-            <div class="meta-row">
-              <span class="meta-chip soon">Soon</span>
-              <span class="meta-chip">Motion transfer</span>
+          <div class="subscribe-box">
+            <div class="subscribe-copy">
+              Open the public /Sync archive, read the latest issue, and sign up from the live Sogni newsletter flow when you are ready.
             </div>
-            <h3>Use motion transfer without wrecking the source frame.</h3>
-            <p>Good when you want movement, but you still need the identity of the original shot to survive.</p>
+            <div class="newsletter-actions">
+              <a class="button" href="https://news.sogni.ai/" rel="noreferrer">Open /Sync archive</a>
+              <a class="button-ghost" href="https://www.sogni.ai/" target="_blank" rel="noreferrer">Sign up on Sogni.ai</a>
+            </div>
           </div>
-        </article>
 
-        <article class="queue-card">
-          <div class="queue-body">
-            <div class="meta-row">
-              <span class="meta-chip soon">Soon</span>
-              <span class="meta-chip">Marketing visuals</span>
+          <div class="newsletter-topics">
+            <div class="topic-tile">
+              <strong>Product Drops</strong>
+              <span>New tools, model releases, and interface changes.</span>
             </div>
-            <h3>Market like a pro with visuals that actually look finished.</h3>
-            <p>Good when the output needs to sell the idea fast on social, landing pages, or launch assets.</p>
+            <div class="topic-tile">
+              <strong>Creator Signals</strong>
+              <span>Workflows worth surfacing, examples worth studying.</span>
+            </div>
+            <div class="topic-tile">
+              <strong>Supernet Notes</strong>
+              <span>Milestones, rewards, launches, and ecosystem movement.</span>
+            </div>
           </div>
-        </article>
+        </div>
 
-        <article class="queue-card">
-          <div class="queue-body">
+        <div class="newsletter-visual">
+          <img src="assets/brand/sogni-neon-grid.png" alt="Abstract Sogni background with neon green grid lights and a soft cyan-magenta glow.">
+          <div class="newsletter-visual-copy">
+            <span class="pill cyan">Public archive</span>
+            <h3>19 volumes are already live in the public /Sync archive.</h3>
+            <p>
+              The current archive lists issues from January 2025 through February 2026, which makes this section immediately useful instead of purely aspirational.
+            </p>
             <div class="meta-row">
-              <span class="meta-chip soon">Soon</span>
-              <span class="meta-chip">From sketch to final</span>
+              <span class="meta-chip lime">Latest: Volume 19</span>
+              <span class="meta-chip indigo">Archive: Jan '25 to Feb '26</span>
             </div>
-            <h3>Go from sketch to final result without getting lost in the middle.</h3>
-            <p>Good when the creator needs one clear path and does not want to piece the workflow together from scattered tips.</p>
           </div>
-        </article>
+        </div>
+      </div>
+
+      <div class="issue-grid">
+        <a class="issue-card" href="https://news.sogni.ai/sogni-sync/19.html" rel="noreferrer">
+          <div class="issue-body">
+            <span class="pill lime">Latest issue</span>
+            <h3>February ’26 · Volume 19</h3>
+            <p><strong>Season 6 is live.</strong> Motion transfer, sound to video, change perspective, Clip Mixer pro features, Sogni 360 orbit videos, and new model drops including Qwen Image Edit and LTX-2.</p>
+          </div>
+        </a>
+
+        <a class="issue-card" href="https://news.sogni.ai/sogni-sync/16.html" rel="noreferrer">
+          <div class="issue-body">
+            <span class="pill cyan">Archive pick</span>
+            <h3>November ’25 · Volume 16</h3>
+            <p><strong>Hope You Had a Great October!</strong> Creator showcase, Photobooth Halloween styles, product updates across the suite, and a strong community / event-led issue.</p>
+          </div>
+        </a>
+
+        <a class="issue-card" href="https://news.sogni.ai/sogni-sync/7.html" rel="noreferrer">
+          <div class="issue-body">
+            <span class="pill indigo">Feature release</span>
+            <h3>March ’25 · Volume 07</h3>
+            <p>Custom aspect ratios and sizes, performance growth across the Supernet, and direct product links across Studio Pro, Studio, Pocket, and Web.</p>
+          </div>
+        </a>
+
+        <a class="issue-card" href="https://news.sogni.ai/sogni-sync/1.html" rel="noreferrer">
+          <div class="issue-body">
+            <span class="pill magenta">First issue</span>
+            <h3>January ’25 · Volume 01</h3>
+            <p>The first /Sync milestone issue marking 1,000,000 images created with Sogni Supernet processing and framing the newsletter from the start.</p>
+          </div>
+        </a>
       </div>
     </section>
 
-    <section>
+    <section id="explore">
       <div class="section-head">
-        <span class="section-label">Why This Format Works</span>
-        <h2>This is built for people who want the steps, not the performance.</h2>
+        <span class="section-label">Explore Sogni</span>
+        <h2>Let readers jump from editorial content into the product ecosystem.</h2>
+        <p>
+          This keeps the index useful after the first scroll. Readers can go from an article or newsletter straight into the right product, archive, or documentation surface.
+        </p>
       </div>
 
-      <div class="info-grid">
-        <article class="info-card">
-          <h3>Show the path clearly.</h3>
-          <p>Each guide should tell the reader what they need, where they click, and what result they should have by the end of the step.</p>
+      <div class="product-grid">
+        <article class="product-card">
+          <span class="pill lime">Browser</span>
+          <h3>Sogni Create</h3>
+          <p>The fastest jump from reading into making. Ideal for lightweight creation, fast tests, and shareable browser workflows.</p>
+          <a class="button-ghost" href="https://app.sogni.ai/create" target="_blank" rel="noreferrer">Start creating</a>
         </article>
 
-        <article class="info-card">
-          <h3>Respect their time.</h3>
-          <p>Write like you are talking to a smart creator. Be direct. Use real examples. Cut anything that sounds like filler.</p>
+        <article class="product-card">
+          <span class="pill cyan">Mac</span>
+          <h3>Sogni Studio Pro</h3>
+          <p>For deeper image, video, and music workflows on Mac, especially when articles lead into more advanced production steps.</p>
+          <a class="button-ghost" href="https://www.sogni.ai/studio" target="_blank" rel="noreferrer">Open Studio Pro</a>
         </article>
 
-        <article class="info-card">
-          <h3>Keep the creator in control.</h3>
-          <p>The tool supports the workflow. The creator makes the decisions. That should stay obvious in every headline and every paragraph.</p>
+        <article class="product-card">
+          <span class="pill indigo">Motion</span>
+          <h3>360 by Sogni</h3>
+          <p>Angle changes, orbit-style motion, and exploratory scene movement from a single source image.</p>
+          <a class="button-ghost" href="https://360.sogni.ai/" target="_blank" rel="noreferrer">Open 360</a>
+        </article>
+
+        <article class="product-card">
+          <span class="pill magenta">Docs</span>
+          <h3>Sogni Learn</h3>
+          <p>The documentation layer for people who need deeper product detail, walkthroughs, and technical follow-through after the editorial page.</p>
+          <a class="button-ghost" href="https://docs.sogni.ai/" target="_blank" rel="noreferrer">Open docs</a>
         </article>
       </div>
     </section>
 
-    <section class="cta-panel">
-      <span class="section-label">Ready To Build</span>
-      <h3>Use the guide. Open the tool. Keep creating.</h3>
-      <p>
-        If the workflow is clear, the next step should feel obvious. Read the guide. Open Sogni Create. Move into Studio when the sequence
-        needs Mixer, Timeline, or Creative Assistant control. Come back for the next post when you want the next move.
-      </p>
-      <div class="cta-actions">
-        <a class="button" href="https://app.sogni.ai/create" target="_blank" rel="noreferrer">Open Sogni Create</a>
-        <a class="button-ghost" href="guides/creative-assistant-studio-pro/">Read the Creative Assistant guide</a>
-        <a class="button-ghost" href="https://www.sogni.ai/studio" target="_blank" rel="noreferrer">Open Sogni Studio</a>
+    <section class="info-strip">
+      <div>
+        <strong>What changed in this version?</strong>
+        <p>The homepage is now positioned as an editorial index, not just a list of guides. Articles and newsletters sit in one clear hierarchy, with stronger brand alignment and clearer paths into Sogni products.</p>
       </div>
+      <a class="button" href="https://news.sogni.ai/" rel="noreferrer">Open /Sync</a>
     </section>
 
     <footer class="site-footer">
       <a class="footer-brand" href="https://www.sogni.ai/" target="_blank" rel="noreferrer" aria-label="Sogni">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 387 160" aria-hidden="true">
-          <path fill="currentColor" d="M17.2,106.99c5.33,2.29,11.3,3.41,17.95,3.41,7.03,0,13.11-1.33,18.23-3.98,5.23-2.75,9.17-6.34,11.82-10.81,2.76-4.44,4.12-9.19,4.12-14.2,0-6.24-1.47-11.22-4.43-14.92-2.86-3.8-6.36-6.57-10.53-8.37-4.09-1.8-9.4-3.59-15.96-5.39-4.94-1.34-8.83-2.57-11.69-3.7-2.86-1.13-5.23-2.64-7.13-4.54-1.8-1.98-2.7-4.49-2.7-7.52,0-4.44,1.47-7.86,4.4-10.22,2.94-2.36,6.75-3.54,11.41-3.54,5.12,0,9.27,1.28,12.39,3.83,3.14,2.57,4.84,5.62,5.12,9.24h17.95c-.67-8.34-4.09-14.87-10.25-19.62-6.08-4.83-13.9-7.24-23.51-7.24-6.75,0-12.67,1.13-17.82,3.41-5.12,2.29-9.11,5.55-11.97,9.81C1.73,26.91.31,31.89.31,37.56c0,6.16,1.42,11.09,4.27,14.76,2.86,3.7,6.28,6.44,10.25,8.24,4.09,1.69,9.35,3.42,15.81,5.11,5.12,1.34,9.11,2.57,11.97,3.7,2.94,1.13,5.36,2.75,7.26,4.83,1.98,2.08,2.99,4.78,2.99,8.09,0,4.26-1.57,7.75-4.71,10.5-3.14,2.64-7.49,3.98-13.11,3.98s-9.63-1.36-12.67-4.11c-2.94-2.75-4.61-6.24-5-10.5H0c0,5.67,1.52,10.66,4.56,14.92,3.04,4.26,7.21,7.57,12.54,9.94l.1-.03ZM102.48,105.71c5.97,3.31,12.67,4.98,20.08,4.98s14.34-1.67,20.52-4.98c6.28-3.42,11.2-8.19,14.83-14.35,3.6-6.16,5.41-13.22,5.41-21.16s-1.75-15.02-5.28-21.16c-3.53-6.14-8.32-10.89-14.39-14.2-6.08-3.31-12.87-4.98-20.37-4.98s-14.29,1.67-20.37,4.98c-6.08,3.31-10.87,8.06-14.39,14.2-3.53,6.16-5.28,13.22-5.28,21.16s1.7,15.15,5.12,21.31c3.42,6.06,8.11,10.81,14.11,14.2ZM134.25,93.64c-3.61,1.98-7.49,2.98-11.69,2.98-6.54,0-12.03-2.29-16.38-6.83-4.27-4.65-6.41-11.17-6.41-19.62,0-5.67,1.06-10.48,3.14-14.35,2.08-3.98,4.89-6.96,8.39-8.96,3.61-1.98,7.49-2.98,11.69-2.98s8.08,1,11.69,2.98c3.6,1.98,6.51,4.98,8.7,8.96,2.19,3.88,3.27,8.68,3.27,14.35s-1.13,10.5-3.42,14.48c-2.29,3.98-5.28,6.96-8.99,8.96v.03ZM227.1,33.53c-4.66-2.46-10.02-3.7-16.09-3.7-6.85,0-13.11,1.69-18.8,5.11-5.61,3.31-10.07,8.01-13.39,14.07-3.22,6.06-4.84,13.02-4.84,20.88s1.62,14.92,4.84,21.16c3.32,6.16,7.78,10.99,13.39,14.48,5.69,3.42,11.97,5.11,18.8,5.11,5.97,0,11.3-1.23,15.96-3.7,4.74-2.57,8.5-5.67,11.25-9.37v13.07c0,7.57-2.03,13.35-6.13,17.33-3.99,3.98-9.27,5.96-15.81,5.96-5.61,0-10.45-1.28-14.52-3.83-3.99-2.46-6.59-5.72-7.83-9.81h-16.09c.95,8.53,4.94,15.25,11.97,20.18,7.03,5.03,15.86,7.52,26.5,7.52,7.98,0,14.81-1.62,20.52-4.83,5.79-3.21,10.22-7.68,13.26-13.35,3.04-5.6,4.56-11.99,4.56-19.18V31.07h-16.38v11.37c-2.65-3.59-6.36-6.57-11.12-8.96l-.05.05ZM234.8,56.13c2.29,3.98,3.42,8.68,3.42,14.07s-1.13,10.14-3.42,14.2c-2.19,3.98-5.07,7.01-8.7,9.09-3.61,2.08-7.49,3.13-11.69,3.13s-7.98-1.05-11.69-3.13c-3.6-2.18-6.57-5.32-8.83-9.37-2.19-4.08-3.27-8.81-3.27-14.2s1.08-10.04,3.27-13.92c2.29-3.98,5.23-6.96,8.83-8.96,3.6-2.08,7.49-3.13,11.69-3.13s8.08,1.05,11.69,3.13c3.6,2.08,6.51,5.11,8.7,9.09ZM332.08,33.69c-4.84-2.57-10.35-3.83-16.53-3.83-4.66,0-9.06.9-13.26,2.7-4.09,1.8-7.47,4.31-10.12,7.52v-8.96h-16.25v78.29h16.25v-43.75c0-7.01,1.75-12.35,5.28-16.05,3.61-3.8,8.45-5.67,14.52-5.67s10.87,1.9,14.39,5.67c3.5,3.7,5.28,9.04,5.28,16.05v43.75h16.09v-46.17c0-7.11-1.37-13.17-4.12-18.18-2.76-5.03-6.59-8.81-11.54-11.37ZM369.34,17.77c1.98,1.98,4.45,2.98,7.42,2.98s5.28-1,7.26-2.98c1.98-1.98,2.99-4.44,2.99-7.39s-1-5.39-2.99-7.39c-1.98-1.98-4.43-2.98-7.26-2.98s-5.41,1-7.42,2.98c-1.98,1.98-2.99,4.44-2.99,7.39s1,5.39,2.99,7.39ZM384.71,109.41V31.12h-16.25v78.29h16.25Z"/>
-        </svg>
-        <span>natalieart.github.io/sogni-architecture-article</span>
+        <img src="assets/brand/sogni-moon.svg" alt="">
+        <img src="assets/brand/sogni-wordmark-white.png" alt="Sogni">
       </a>
-      <span>Straight guides for creators using Sogni.</span>
+      <span>Editorial hub for Sogni guides, workflow drops, and /Sync newsletters.</span>
     </footer>
   </div>
+
+  <div class="reader-overlay" id="readerOverlay" hidden aria-hidden="true">
+    <div class="reader-dialog" role="dialog" aria-modal="true" aria-labelledby="readerTitle">
+      <div class="reader-toolbar">
+        <div class="reader-meta">
+          <span class="pill cyan">Blog Reader</span>
+          <strong class="reader-title" id="readerTitle">Loading article…</strong>
+          <span class="reader-url" id="readerUrl"></span>
+        </div>
+
+        <div class="reader-actions">
+          <a class="button-ghost" id="readerOpenFull" href="#">Open full page</a>
+          <button class="button" id="readerClose" type="button">Close</button>
+        </div>
+      </div>
+
+      <iframe class="reader-frame" id="readerFrame" title="Sogni article reader" loading="eager"></iframe>
+    </div>
+  </div>
+
+  <script>
+    (() => {
+      const articleLinks = Array.from(
+        document.querySelectorAll('a.hero-cover[href^="guides/"], a.story-card[href^="guides/"], a.article-card[href^="guides/"]')
+      );
+
+      if (!articleLinks.length) {
+        return;
+      }
+
+      const overlay = document.getElementById("readerOverlay");
+      const frame = document.getElementById("readerFrame");
+      const closeButton = document.getElementById("readerClose");
+      const openFullLink = document.getElementById("readerOpenFull");
+      const titleNode = document.getElementById("readerTitle");
+      const urlNode = document.getElementById("readerUrl");
+      let activeTrigger = null;
+
+      const setOpenState = (isOpen) => {
+        overlay.hidden = !isOpen;
+        overlay.setAttribute("aria-hidden", String(!isOpen));
+        document.body.style.overflow = isOpen ? "hidden" : "";
+      };
+
+      const openReader = (link) => {
+        const href = link.getAttribute("href");
+        const heading = link.querySelector("h1, h2, h3");
+        const title = heading ? heading.textContent.trim() : "Article";
+
+        activeTrigger = link;
+        titleNode.textContent = title;
+        urlNode.textContent = href;
+        openFullLink.href = href;
+        frame.src = href;
+        setOpenState(true);
+        closeButton.focus();
+      };
+
+      const closeReader = () => {
+        setOpenState(false);
+        frame.src = "about:blank";
+
+        if (activeTrigger) {
+          activeTrigger.focus();
+        }
+      };
+
+      articleLinks.forEach((link) => {
+        link.addEventListener("click", (event) => {
+          if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) {
+            return;
+          }
+
+          event.preventDefault();
+          openReader(link);
+        });
+      });
+
+      closeButton.addEventListener("click", closeReader);
+
+      overlay.addEventListener("click", (event) => {
+        if (event.target === overlay) {
+          closeReader();
+        }
+      });
+
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape" && !overlay.hidden) {
+          closeReader();
+        }
+      });
+    })();
+  </script>
 </body>
 </html>
